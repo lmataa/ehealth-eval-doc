@@ -11,3 +11,7 @@ Fichero | Descripción
  evaluacion_arch.md | fichero Markdown para editar la entrega
  README.md | Este documento
  RubricaPractica2.pdf | Guía de evaluación por cada punto de esta práctica
+
+## Contact
+
+- Subir Issue y asignar a lmataa o correo a l.mataa@alumnos.upm.es
