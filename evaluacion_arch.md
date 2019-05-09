@@ -23,9 +23,10 @@ lof-own-page: "True"
 Documento realizado por:
 
 - Luis Mata Aguilar
-- Carlos
-- Daniel
-- Yeray
+- Carlos 
+- Daniel 
+- Yeray Granada 
+- María Gallego Martín
 - Alejandro
  
 El propósito de este documento es evaluar la arquitetura software recogida en el documento "a_evaluar.pdf" del repositorio de GitHub [lmataa/ehealth-eval-doc](https://github.com/lmataa/ehealth-eval-doc). El cual corresponde al resultado de la primera práctica de la asignatura de Arquitectura y Diseño SW del grupo GIWM31 redactado por:
@@ -51,10 +52,10 @@ En esta sección se incluye:
 ### 1.2.1 Definiciones
 
 - **Atributos de calidad**: 
-- **d**:
-- **d**:
-- **d**:
-- **d**:
+- **Business Goals**:
+- **Business Drivers**:
+- **ATAM**:
+- ****:
 
 
 ### 1.2.2 Acrónimos y Abreviaturas
@@ -77,21 +78,21 @@ Author   | Document
 
 El presente documento se ha organizado como sigue:
 
-- **Capítulo 1**:
+- **Capítulo 1**: se realiza una introducción que incluye el propósito del documento, definiciones, acrónimos, y abreviaturas utilizados así como las referencias bibliográficas consultadas.
 
-- **Capítulo 2**:
+- **Capítulo 2**: memoria del desarrollo la fase 0 del proceso ATAM referente a la validación de una arquitectura software.
 
-- **Capítulo 3**:
+- **Capítulo 3**: memoria del desarrollo de la fase 1 del proceso ATAM referente al análisis de business goals, business drivers, patrones arquitectónicos, atributos de calidad, etc.
 
-- **Capítulo 4**:
+- **Capítulo 4**: artefacto de análisis de los escenarios existentes así como la identificación de nuevos escenarios.
 
-- **Capítulo 5**:
+- **Capítulo 5**: corresponde a la fase 3 del proceso ATAM, follow up, queda introducida pero está fuera del alcance de este documento.
 
-- **Capítulo 6**:
+- **Capítulo 6**: principales conclusiones del trabajo de evaluación.
 
-- **Capítulo 7**:
+- **Capítulo 7**: anexo 1 con el acta de reuniones.
 
-- **Capítulo 8**:
+- **Capítulo 8**: anexo 2 con el NDA firmado por las partes.
 
 
 # 2. Fase 0: Preparación
@@ -106,7 +107,14 @@ Se presenta un calendario de reuniones propuestas...
 
 Semana | Fase ATAM / Objetivos reunión | Reunión equipo evaluado 
 -------|-------------------------------|------------------------
-6/05 | Fase 0: preparación | N/A
+1/05 | Fase 0: preparación | N/A
+6/05 | Fase 1: Presentación de ATAM | 9/05/2019, Acta 1
+6/05 | Fase 1: Business drivers, presentación de la arquitectura | 10/05/2019, Acta 2
+13/05 | Fase 1: Identificación de enfoques arquitectónicos, árbol de utilidad | N/A
+13/05 | Fase 1: Generación del árbol de atributos de calidad | 13/05/19, Acta 3
+13/05 | Fase 1: Enfoques arquitectónicos  | N/A
+13/05 | Fase 2: Completa | N/A
+20/05 | Fase 3: Follow-up y Conclusiones | N/A
 
 En el anexo 2 se recoge el NDA firmado entre las partes.
 
@@ -114,14 +122,13 @@ Una de las tareas que se ha realizado en esta fase es la identificación, dentro
 
 Rol | Persona
 ----|--------
-Líder del equipo | -
-Líder de evaluación | -
-Escriba de escenarios | -
-Escriba de actas | -
-Entrevistador | -
+Líder del equipo | Luis Mata Aguilar
+Líder de evaluación | Carlos
+Escriba de escenarios | Daniel
+Escriba de actas | Yeray
+Entrevistador | María
 
-Como resultado, la planificación...
-
+La planificación inicial pretende mantener realizando al equipo un trabajo constante condensado en iteraciones.  Mediante reuniones en el tiempo a lo largo de 4 semanas, se prevee que se podrá realizar en su totalidad la evaluación solicitada. Así mismo se preveen periodos de tiempo suficientemente condensados como para que existan huecos temporales en los que el equipo de evaluación pueda antender sus competencias externas a este proyecto.
 
 # 3. Fase 1: Evaluación inicial
 
@@ -179,28 +186,257 @@ Grupos de prioridad identificados por el equipo de proyecto y nuestra reflexión
 
 ## 3.5 Análisis de vistas
 
+Intro de sección
+
+- Vista lógica
+- Vista de procesos
+- Vista de desarrollo
+- Vista física o de despliegue
+- Escenarios
+
+### 3.5.1 Vista lógica
+
+### 3.5.2 Vista de procesos
+
+### 3.5.3 Vista de desarollo
+
+### 3.5.4 Vista de despliegue
+
+### 3.5.5 Vista de escenarios
 
 ## 3.6 Identificación de puntos de sensibilidad
 
+Se definen los puntos de sensibilidad de un sistema, como los componentes críticos para el éxito (correcto funcionamiento) del mismo. De la evaluación de la arquitectura propuesta hemos identificado los siguientes:
+
+- PS1: Justificación
+- PS2: Justificación ...
+
 ## 3.7 Identificación de puntos de equilibrio
+
+Se definen los puntos de equilibrio de un sistema como una propiedad que afecta a más de un atributo de calidad o punto de sensibilidad. De la evaluación de la arquitectura propuesta, hemos identificado los siguientes:
+
+- PE1: Justificación
+- PE2: Justificación
+
 
 ## 3.8 Identificación de riesgos
 
+Se define riesgo como una decisión arquitectónica que puede generar consecuencias indeseables a la luz de los requisitos de los atributos de calidad. De la evaluación de la arquitectura propuesta, hemos identificado los siguientes:
+
+- R1: Descripción
+- R2: Descripción
+
+¿Posible métrica de coste de los riesgos?
+
 # 4. Fase 2: Evaluación completa
+
+En la segunda fase continúa el análisis de la arquitectura con los stakeholders del proyecto.
 
 ## 4.1 Análisis de escenarios existentes e identificaicón de nuevos escenarios
 
+En está sección se presenta el análisis de escenarios. El objetivo es contar con suficiente información para poder tomar decisiones de diseño con conocimiento de causa y efecto, estableciendo un vínculo con los requisitos de los atributos de calidad que deben cumplirse.
+
+### 4.1.1 Escenario 1
+
+ Escenario: 1 | Como cliente quiero que el sistema ...
+-------------|---------------------------------------
+Atributo | Nombre de atributo
+Contexto | -
+Estímulo | -
+Respuesta | -
+
+Decisiones arquitectónicas | Decisión | Sensibilidad | Equilibrio | Riesgos | No riesgos 
+---------------------------|----------|--------------|------------|------|----
+ decision | - | - | - | - | -
+
+#### 4.1.1.1 Razonamiento
+
+Explicación
+
+#### 4.1.1.2 Diagrama arquitectónico
+
+
+### 4.1.2 Escenario 2
+
+ Escenario: 2 | Como cliente quiero que el sistema ...
+-------------|---------------------------------------
+Atributo | Nombre de atributo
+Contexto | -
+Estímulo | -
+Respuesta | -
+
+Decisiones arquitectónicas | Decisión | Sensibilidad | Equilibrio | Riesgos | No riesgos 
+---------------------------|----------|--------------|------------|------|----
+ decision | - | - | - | - | -
+
+#### 4.1.2.1 Razonamiento
+
+Explicación
+
+#### 4.1.2.2 Diagrama arquitectónico
+
+### 4.1.3 Escenario 3
+
+ Escenario: 3 | Como cliente quiero que el sistema ...
+-------------|---------------------------------------
+Atributo | Nombre de atributo
+Contexto | -
+Estímulo | -
+Respuesta | -
+
+Decisiones arquitectónicas | Decisión | Sensibilidad | Equilibrio | Riesgos | No riesgos 
+---------------------------|----------|--------------|------------|------|----
+ decision | - | - | - | - | -
+
+#### 4.1.3.1 Razonamiento
+
+Explicación
+
+#### 4.1.3.2 Diagrama arquitectónico
+
+### 4.1.3 Escenario 4
+
+ Escenario: 4 | Como cliente quiero que el sistema ...
+-------------|---------------------------------------
+Atributo | Nombre de atributo
+Contexto | -
+Estímulo | -
+Respuesta | -
+
+Decisiones arquitectónicas | Decisión | Sensibilidad | Equilibrio | Riesgos | No riesgos 
+---------------------------|----------|--------------|------------|------|----
+ decision | - | - | - | - | -
+
+#### 4.1.4.1 Razonamiento
+
+Explicación
+
+#### 4.1.4.2 Diagrama arquitectónico
+
 # 5. Fase 3:  Follow-up
 
+La fase 3 se corresponde con el seguimiento, donde el equipo de evaluación produce y entrega un informe con los resultados finales de la evaluación. En primer lugar se distribuye a las partes interesadas fundamentales para asegurarse de que no contiene errores de comprensión, y una vez completada esta revisión se entrega a la persona encargada de la evaluación.
+
+Al tratarse de un ejercicio académico las partes interesadas consideradas para la correcta compresión del documento serán bien profesores como cliente final y grupo evaluado como validadores de nuestro ejercicio.
+
 # 6. Conclusiones de la evaluación
+
+La presentación de conceptos así como la propia arquitectura propuesto por el equipo de proyecto para el Sistema --- resulta --- si bien consideramos que hay algunos aspectos mejorables en el planteamiento:
+
+- Explicaciones
+- 
+- 
+- 
 
 # 7. Anexo 1: actas de reuniones
 
 ## 7.1 ACTA 1
 
+### Fecha: 25/04/2019
+
+### 7.1.1 Participantes
+
+Grupo responsable de la arquitectura:
+  
+- 
+- 
+- 
+- 
+- 
+  
+Grupo ATAM:
+  
+- 
+- 
+- 
+- 
+- 
+
+Roles ATAM | Miembro
+-----------|---------
+Team Leader | -
+Evaluation Leader | -
+Scenario scribe | -
+Proceedings scribe | -
+Questioner | - 
+
+### 7.1.2 Introducción
+
+### 7.1.3 Objetivos
+
+### 7.1.4 Acuerdos
+
 ## 7.2 ACTA 2
 
+### Fecha: 25/04/2019
+
+### 7.2.1 Participantes
+
+Grupo responsable de la arquitectura:
+  
+- 
+- 
+- 
+- 
+- 
+  
+Grupo ATAM:
+  
+- 
+- 
+- 
+- 
+- 
+
+Roles ATAM | Miembro
+-----------|---------
+Team Leader | -
+Evaluation Leader | -
+Scenario scribe | -
+Proceedings scribe | -
+Questioner | - 
+
+### 7.2.2 Introducción
+
+### 7.2.3 Objetivos
+
+### 7.2.4 Acuerdos
+
 ## 7.3 ACTA 3
+
+### Fecha: 25/04/2019
+
+### 7.3.1 Participantes
+
+Grupo responsable de la arquitectura:
+  
+- 
+- 
+- 
+- 
+- 
+  
+Grupo ATAM:
+  
+- 
+- 
+- 
+- 
+- 
+
+Roles ATAM | Miembro
+-----------|---------
+Team Leader | -
+Evaluation Leader | -
+Scenario scribe | -
+Proceedings scribe | -
+Questioner | - 
+
+### 7.3.2 Introducción
+
+### 7.3.3 Objetivos
+
+### 7.3.4 Acuerdos
 
 # 8. Anexo 2: NDA
 
