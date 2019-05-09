@@ -1,15 +1,17 @@
 ---
 title: "Evaluación de una Arquitectura Software por medio de ATAM"
-author: []
+author: [ ]
 date: "2019"
 subtitle: "Segunda Práctica de Arquitectura de Software - UPM"
 logo: capturas/logo.png
-titlepage: "True"
-toc: "True"
-toc-own-page: "True"
-listings-no-page-break: "True"
+titlepage: "true"
+toc: "true"
+toc-own-page: "true"
+listings-no-page-break: "true"
 lof : "true"
-lof-own-page: "True"
+lof-own-page: "true"
+lot: "true"
+lot-own-page: "true"
 ...
 
 # 1. Introducción
@@ -73,6 +75,7 @@ Citation | Table
 ---------|-------
 Author   | Document
 
+Table: Referencias
 
 ## 1.4 Estructura del documento
 
@@ -116,6 +119,8 @@ Semana | Fase ATAM / Objetivos reunión | Reunión equipo evaluado
 13/05 | Fase 2: Completa | N/A
 20/05 | Fase 3: Follow-up y Conclusiones | N/A
 
+:Planificación de reuniones
+
 En el anexo 2 se recoge el NDA firmado entre las partes.
 
 Una de las tareas que se ha realizado en esta fase es la identificación, dentro del equipo de evaluación, de los diferentes roles de equipo; en la tabla siguiente se recogen éstos.
@@ -127,6 +132,8 @@ Líder de evaluación | Carlos
 Escriba de escenarios | Daniel
 Escriba de actas | Yeray
 Entrevistador | María
+
+:Roles del equipo ATAM
 
 La planificación inicial pretende mantener realizando al equipo un trabajo constante condensado en iteraciones.  Mediante reuniones en el tiempo a lo largo de 4 semanas, se prevee que se podrá realizar en su totalidad la evaluación solicitada. Así mismo se preveen periodos de tiempo suficientemente condensados como para que existan huecos temporales en los que el equipo de evaluación pueda antender sus competencias externas a este proyecto.
 
@@ -158,23 +165,29 @@ Atributo de calidad | Prioridad | Justificación
 --------------------|-----------|--------------
 Atributo | Número | Texto
 
+:Atributos de calidad
 
 Atributo de calidad | Atributo refinado | ASR
 --------------------|-------------------|----
 Atributo | Refinado | ASR
 
-  
+:Árbol de utilidad original
+
 A continuación, se procede al análisis de los atributos de calidad cruzados con los Business Goals.
 
 Atributo de calidad | Prioridad | Justificación | Análisis
 --------------------|-----------|---------------|---------
 Atributo | Número | Texto del atributo | Nuestro análisis
 
+:Ánalisis de atributos de calidad con Business Goals
+
 A continuación, se analiza el árbol de utilidad, planteando cómo podrían quedar los atributos de calidad y refinados, la prioridad que identificamos en base al análisis de Business Goals, y el impacto global en la arquitectura y el valor de negocio, de cada uno de ellos. En algunos casos los atributos se verán modificados y en otros podría ser propuesta su eliminación. 
 
 Atributo de calidad | Atributo refinado | Prioridad | Justificación
 --------------------|-------------------|-----------|--------------
 Atributo (nuevo o no) | Atributo refinado (nuevo o no) | Prioridad nuestra | Justificación de las decisiones tomadas
+
+:Árbol de utilidad propuesto
 
 Del análisis de los atributos de calidad y árbol de utilidad, detectamos que, ...
 
@@ -245,9 +258,13 @@ Contexto | -
 Estímulo | -
 Respuesta | -
 
+:Escenario 1
+
 Decisiones arquitectónicas | Decisión | Sensibilidad | Equilibrio | Riesgos | No riesgos 
 ---------------------------|----------|--------------|------------|------|----
  decision | - | - | - | - | -
+
+:Escenario 1 decisiones
 
 #### 4.1.1.1 Razonamiento
 
@@ -265,9 +282,13 @@ Contexto | -
 Estímulo | -
 Respuesta | -
 
+:Escenario 2
+
 Decisiones arquitectónicas | Decisión | Sensibilidad | Equilibrio | Riesgos | No riesgos 
 ---------------------------|----------|--------------|------------|------|----
  decision | - | - | - | - | -
+
+:Escenario 2 decisiones
 
 #### 4.1.2.1 Razonamiento
 
@@ -284,9 +305,13 @@ Contexto | -
 Estímulo | -
 Respuesta | -
 
+:Escenario 3
+
 Decisiones arquitectónicas | Decisión | Sensibilidad | Equilibrio | Riesgos | No riesgos 
 ---------------------------|----------|--------------|------------|------|----
  decision | - | - | - | - | -
+
+:Escenario 3 decisiones
 
 #### 4.1.3.1 Razonamiento
 
@@ -303,9 +328,13 @@ Contexto | -
 Estímulo | -
 Respuesta | -
 
+:Escenario 4
+
 Decisiones arquitectónicas | Decisión | Sensibilidad | Equilibrio | Riesgos | No riesgos 
 ---------------------------|----------|--------------|------------|------|----
  decision | - | - | - | - | -
+
+ :Escenario 4 decisiones
 
 #### 4.1.4.1 Razonamiento
 
@@ -360,6 +389,8 @@ Scenario scribe | -
 Proceedings scribe | -
 Questioner | - 
 
+:Roles ATAM acta 1
+
 ### 7.1.2 Introducción
 
 ### 7.1.3 Objetivos
@@ -396,6 +427,8 @@ Scenario scribe | -
 Proceedings scribe | -
 Questioner | - 
 
+:Roles ATAM acta 2
+
 ### 7.2.2 Introducción
 
 ### 7.2.3 Objetivos
@@ -431,6 +464,8 @@ Evaluation Leader | -
 Scenario scribe | -
 Proceedings scribe | -
 Questioner | - 
+
+:Roles ATAM acta 3
 
 ### 7.3.2 Introducción
 
