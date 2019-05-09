@@ -1,7 +1,7 @@
 ---
 title: "Evaluación de una Arquitectura Software por medio de ATAM"
-author: [Luis Mata]
-date: "02-05-2019"
+author: []
+date: "2019"
 subtitle: "Segunda Práctica de Arquitectura de Software - UPM"
 logo: capturas/logo.png
 titlepage: "True"
