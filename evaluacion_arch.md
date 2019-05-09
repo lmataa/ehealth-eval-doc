@@ -25,16 +25,16 @@ listings-no-page-break: "true"
 Documento realizado por:
 
 - Luis Mata Aguilar
-- Carlos 
-- Daniel 
-- Yeray Granada 
+- Carlos Gómez Robles
+- Daniel Rodríguez Manzanero
+- Yeray Granada Layos
 - María Gallego Martín
-- Alejandro
+- Alejandro de la Fuente Perdiguero
  
 El propósito de este documento es evaluar la arquitetura software recogida en el documento "a_evaluar.pdf" del repositorio de GitHub [lmataa/ehealth-eval-doc](https://github.com/lmataa/ehealth-eval-doc). El cual corresponde al resultado de la primera práctica de la asignatura de Arquitectura y Diseño SW del grupo GIWM31 redactado por:
   
 
-- Pérez Souza, Miguel Ángel 
+- Pérez Souza, Miguel Ángel
 - Romero Andrés, Eric
 - Sastre Gallardo, Alberto
 - Torres Sánchez, Alfonso
@@ -129,10 +129,11 @@ Una de las tareas que se ha realizado en esta fase es la identificación, dentro
 Rol | Persona
 ----|--------
 Líder del equipo | Luis Mata Aguilar
-Líder de evaluación | Carlos
-Escriba de escenarios | Daniel
-Escriba de actas | Yeray
-Entrevistador | María
+Líder de evaluación | Daniel Rodríguez Manzaneroo
+Escriba de escenarios | Yeray Granada Layos
+Escriba de actas | Carlos Gómez Robles
+Entrevistador 1 | María Gallego Martín
+Entrevistador 2 | Alejandro de la Fuente Perdiguero
 
 :Roles del equipo ATAM
 
@@ -457,33 +458,35 @@ La presentación de conceptos así como la propia arquitectura propuesto por el 
 
 ## 7.1 ACTA 1
 
-### Fecha: 25/04/2019
+### Fecha: 09/05/2019
 
 ### 7.1.1 Participantes
 
-Grupo responsable de la arquitectura:
+**Grupo responsable de la arquitectura**:
   
-- 
-- 
-- 
-- 
-- 
+- Miguel Ángel Pérez Souza, bn0112
+- Eric Romero Andrés, bn0111
+- Alberto Sastre Gallardo, bn0195
+- Alfonso Torres Sánchez, bn0107
+- Carlos Vila Martín, bn0177
   
-Grupo ATAM:
+**Grupo ATAM**:
+   
+- Luis Mata Aguilar
+- Carlos Gómez Robles
+- Daniel Rodríguez Manzanero
+- Yeray Granada Layos
+- María Gallego Martín
+- Alejandro de la Fuente Perdiguero
   
-- 
-- 
-- 
-- 
-- 
-
 Roles ATAM | Miembro
 -----------|---------
-Team Leader | -
-Evaluation Leader | -
-Scenario scribe | -
-Proceedings scribe | -
-Questioner | - 
+Team Leader | Luis Mata Aguilar
+Evaluation Leader | Daniel Rodríguez Robles
+Scenario scribe | Carlos Gómez Robless
+Proceedings scribe | Yeray Granada Layoss
+Questioner 1 | María Gallego Martín
+Questioner 2 | Alejandro de la Fuente Perdiguero
 
 :Roles ATAM acta 1
 
@@ -499,29 +502,31 @@ Questioner | -
 
 ### 7.2.1 Participantes
 
-Grupo responsable de la arquitectura:
+**Grupo responsable de la arquitectura**:
   
-- 
-- 
-- 
-- 
-- 
+- Miguel Ángel Pérez Souza, bn0112
+- Eric Romero Andrés, bn0111
+- Alberto Sastre Gallardo, bn0195
+- Alfonso Torres Sánchez, bn0107
+- Carlos Vila Martín, bn0177
   
-Grupo ATAM:
+**Grupo ATAM**:
   
-- 
-- 
-- 
-- 
-- 
-
+- Luis Mata Aguilar
+- Carlos Gómez Robles
+- Daniel Rodríguez Manzanero
+- Yeray Granada Layos
+- María Gallego Martín
+- Alejandro de la Fuente Perdiguero
+  
 Roles ATAM | Miembro
 -----------|---------
-Team Leader | -
-Evaluation Leader | -
-Scenario scribe | -
-Proceedings scribe | -
-Questioner | - 
+Team Leader | Alejandro de la Fuente Perdiguero
+Evaluation Leader | Luis Mata Aguilar
+Scenario scribe | Daniel Rodríguez Perdiguero
+Proceedings scribe | Yeray Granada Layos
+Questioner 1 | Carlos Gómez Robles
+Questioner 2 | María Gallego Martín
 
 :Roles ATAM acta 2
 
@@ -537,29 +542,31 @@ Questioner | -
 
 ### 7.3.1 Participantes
 
-Grupo responsable de la arquitectura:
+**Grupo responsable de la arquitectura**:
   
-- 
-- 
-- 
-- 
-- 
+- Miguel Ángel Pérez Souza, bn0112
+- Eric Romero Andrés, bn0111
+- Alberto Sastre Gallardo, bn0195
+- Alfonso Torres Sánchez, bn0107
+- Carlos Vila Martín, bn0177
   
-Grupo ATAM:
+**Grupo ATAM**:
   
-- 
-- 
-- 
-- 
-- 
-
+- Luis Mata Aguilar
+- Carlos Gómez Robles
+- Daniel Rodríguez Manzanero
+- Yeray Granada Layos
+- María Gallego Martín
+- Alejandro de la Fuente Perdiguero
+  
 Roles ATAM | Miembro
 -----------|---------
-Team Leader | -
-Evaluation Leader | -
-Scenario scribe | -
-Proceedings scribe | -
-Questioner | - 
+Team Leader | Daniel Rodríguez Manzanero
+Evaluation Leader | Yeray Granada Layos
+Scenario scribe | María Gallego Martín
+Proceedings scribe | Alejandro de la Fuente Perdiguero
+Questioner 1 | Luis Mata Aguilar
+Questioner 2 | Carlos Gómez Robles
 
 :Roles ATAM acta 3
 
