@@ -7,11 +7,11 @@ logo: capturas/logo.png
 titlepage: "true"
 toc: "true"
 toc-own-page: "true"
-listings-no-page-break: "true"
 lof : "true"
 lof-own-page: "true"
 lot: "true"
 lot-own-page: "true"
+listings-no-page-break: "true"
 ...
 
 # 1. Introducción
@@ -209,25 +209,63 @@ BD4 | Identificación de usuarios mediante escáner biométrico. Todo usuario di
 
 ## 3.2 Análisis de patrones arquitectónicos
 
-Definición de patron arquitectonico seguida...
+Un patrón arquitectónico es 
 
-Particularidades y beneficios de los patrones arquitectonicos ...
+Uno de los aspectos más importantes de los patrones arquitectónicos es que están asociados a diferentes atributos de calidad. Esto quiere decir que existen algunos patrones que representan soluciones abstractas para problemas de rendimiento y otros pueden ser utilizados con éxito en sistemas que requieran de una alta disponibilidad. Al comienzo de la fase de diseño, un arquitecto de software escoge qué patrones arquitectónicos se adaptan más confortablemente a las necesidades de calidad deseadas para el sistema objetivo.
 
-Identificaicón de los patrones arquitectonicos usados...
+Entre los múltiples patrones arquitectónicos que existen, hemos visto en detalle como contenidos de la asignatura: 
+
+- Layered Architecture
+- Event-Driven Architecture
+- Microkernel Architecture
+- Microservices Architecture Pattern
+- Space-Based Architecture
+
+A continuación se prodece a la identificación de los patrones arquitectonicos usados.
+
+### 3.2.1 Microservices
+
+
+
+### 3.2.2 Event-Driven
+
+El patrón principal que considera el equipo de evaluación que se ha seguido es el de *event-driven architecture* debido al uso de sistemas IoT con un servidor que gestiona las conexiones y una aplicación de móvil que gestione los eventos de análisis de mediciones de dichos dispositivos.
+
+Se trata de que conforme se use la aplicación propuesta por el equipo original de diseño, los eventos se dispararán desde el primer momento. Primero en la captura de datos por los dispositivos y de ahí se propagarán eventos en forma de conexiones hasta los envíos de notificaciones a los centros médicos, tal y como se propone originalmente.
+
+Además este tipo de patrón se usa en sistemas que requieran de una componente altamente asíncrona, como son los sensores IoT, lo cual minimizará el tiempo de respuesta, que además sería un atributo de calidad derivado de todos los Business Goals originalmente planteados.
+
+Sin embargo este patrón arquitectónico no se ha visto considerado por el equipo de diseño.
 
 ## 3.3 Árbol de atributos de calidad
 
-Un atributo de calidad es una propiedad medible o comprobable de un sistema...
+Un atributo de calidad es una propiedad medible o comprobable de un sistema que se utiliza para indicar cómo de bien el sistema satisface las necesidades de sus stakeholders.
+
+En las tablas siguientes se recogen tanto atributos de calidad cómo el árbol de utilidad identificado por el equipo objeto de evaluación.
+
 
 Atributo de calidad | Prioridad | Justificación
 --------------------|-----------|--------------
-Atributo | Número | Texto
+Disponibilidad | Alta | En caso de emergencia el sistema necesita estar disponibl en cualquier día y hora del año.
+Interoperabilidad | Alta | El sistema debe poder ser solicitado desde cualqueir dispositivo compatible.
+Rendimiento | Alta | La respuesta del sistema debe resultar en el menor tiempo posible.
+Seguridad (Security) | Media | Se tratan datos personales y sanitarios de pacientes. Según el RGPD son datos especialmente sensibles.
+Escalabilidad | Media | El sistema debe tener la capacidad de soportar la interacción de un gran número de usuarios al mismo tiempo sin que se vea afectado su funcionamiento.
+Portabilidad | Media | El sistema debe ser capaz de funcioanr correctamente en la mayoría de dispositivos.
+Usabilidad | Baja | El sistema debe poder ser usado fácilmente.
+Modificabilidad | Baja | El sistema debe poder ser modificable para facilitar el mantenimiento.
+Testabilidad | Baja | El sistema se debe poder probar de forma sencilla.
 
 :Atributos de calidad
 
-Atributo de calidad | Atributo refinado | ASR
---------------------|-------------------|----
-Atributo | Refinado | ASR
+Atributo de calidad | Atributo refinado | Architecture Significant Requirement
+--------------------|-------------------|-------------------------------------
+Disponibilidad | Tiempo disponible | El sistema estará disponible 24 del día, todos los días del año 
+ - | Horario de actualización | En caso de que sea necesario mantenimiento o actualización, se llevará a cabo de 3 AM a 5 AM y no se inhabilitarán todas las funcionalidades, solo aquellas que vayan a ser actualizadas o mantenidas.
+Interoperabilidad | Conexión con otros sistemas | El sistema se comunicará con los sistemas informáticos de la sanidad pública y las clínicas privadas que participen en el sistema
+- | Conexión con dispositivos | El sistema será compatible con dispositivos de monitorización tipo relojes y pulseras inteligentes (inicialmente Apple Watch, Samsung Galaxy Watch, Samsung Gear Fit 2, Xiaomi Mi Band 2 y 3, Armazfit Bip, Fitbit Versa y Fitbit Inspire)
+Rendimiento | Tiempo de respuesta (cita) | Cuando un usario solicita una cita el tiempo de respuesta del sistema para asignarle la cita no será mayor de 5 segundos.
+- | Tiempo de respuesta (llamada a emergencias) | Cuando uno de los dispositivos de monitorización detecta una parada cardíaca o caída, el sistema responderá llamando a emergencias en un plazo máximo de 20 segundos
 
 :Árbol de utilidad original
 
