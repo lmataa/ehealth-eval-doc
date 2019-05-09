@@ -102,22 +102,83 @@ Hemos utilizado...
 
 Nuestro caso...
 
+Se presenta un calendario de reuniones propuestas...
+
+Semana | Fase ATAM / Objetivos reunión | Reunión equipo evaluado 
+-------|-------------------------------|------------------------
+6/05 | Fase 0: preparación | N/A
+
+En el anexo 2 se recoge el NDA firmado entre las partes.
+
+Una de las tareas que se ha realizado en esta fase es la identificación, dentro del equipo de evaluación, de los diferentes roles de equipo; en la tabla siguiente se recogen éstos.
+
+Rol | Persona
+----|--------
+Líder del equipo | -
+Líder de evaluación | -
+Escriba de escenarios | -
+Escriba de actas | -
+Entrevistador | -
+
 Como resultado, la planificación...
 
 
 # 3. Fase 1: Evaluación inicial
 
+El proceso de evaluación principal definido en ATAM, se especifica en las fases 1 y 2, correspondientes a las secciones 3 y 4 de este documento.
 
+En esa sección se reflejan los resultados de la primera fase en concreto. El equipo evaluador presenta al equipo del proyecto el proceso ATAM, se describen los pasos a seguir así como las preguntas a responder por el equipo evaluado.
+
+A continuación se presentan Business Goals y Business Drivers del proyecto, incorporando las funciones principales del sistema.
 
 ## 3.1 Identificación de Business Goals y Business Drivers
 
+Un Business Goal (objetivo de negocio) ..
+
 ## 3.2 Análisis de patrones arquitectónicos
+
+Definición de patron arquitectonico seguida...
+
+Particularidades y beneficios de los patrones arquitectonicos ...
+
+Identificaicón de los patrones arquitectonicos usados...
 
 ## 3.3 Árbol de atributos de calidad
 
+Un atributo de calidad es una propiedad medible o comprobable de un sistema...
+
+Atributo de calidad | Prioridad | Justificación
+--------------------|-----------|--------------
+Atributo | Número | Texto
+
+
+Atributo de calidad | Atributo refinado | ASR
+--------------------|-------------------|----
+Atributo | Refinado | ASR
+
+  
+A continuación, se procede al análisis de los atributos de calidad cruzados con los Business Goals.
+
+Atributo de calidad | Prioridad | Justificación | Análisis
+--------------------|-----------|---------------|---------
+Atributo | Número | Texto del atributo | Nuestro análisis
+
+A continuación, se analiza el árbol de utilidad, planteando cómo podrían quedar los atributos de calidad y refinados, la prioridad que identificamos en base al análisis de Business Goals, y el impacto global en la arquitectura y el valor de negocio, de cada uno de ellos. En algunos casos los atributos se verán modificados y en otros podría ser propuesta su eliminación. 
+
+Atributo de calidad | Atributo refinado | Prioridad | Justificación
+--------------------|-------------------|-----------|--------------
+Atributo (nuevo o no) | Atributo refinado (nuevo o no) | Prioridad nuestra | Justificación de las decisiones tomadas
+
+Del análisis de los atributos de calidad y árbol de utilidad, detectamos que, ...
+
+Así mismo, del análisis de los Business Goals ...
+
 ## 3.4 Análisis de stakeholders
 
+Grupos de prioridad identificados por el equipo de proyecto y nuestra reflexión al respecto.
+
 ## 3.5 Análisis de vistas
+
 
 ## 3.6 Identificación de puntos de sensibilidad
 
