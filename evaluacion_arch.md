@@ -306,6 +306,16 @@ Intro de sección
 
 ### 3.5.1 Vista lógica
 
+Para la elaboración de esta vista han utilizado la notación UML de diagramas de clases estándar, donde comentan que cada entidad, representada por un cuadro con su nombre, donde mencionan la cardinalidad, pero no justfican el porqué de todas esas cardinalidades y creemos que es importante, puesto que para entender la vista en su totalidad, un apartado como las cardinalidades y la explicación de las mismas es necesario para comprender todas las relaciones. 
+
+A nuestro parecer faltaría al menos una relación más, en concreto entre cliente y entidad sanitaria, donde la interacción entre ambos es directa, donde el cliente es atendido y donde la entidad sanitaria tiene registrado datos de cliente, y especialistas sanitarios que atienden a pacientes.
+
+Se ha encontrado una inconsistencia en el Catálogo. En la vista hay un total de 5 entidades: Cliente, Pulsera, Móvil, Cuenta y Entidad Sanitaria. Sin embargo a la hora de mencionarlos y desarrollarlos en el catálogo, a lo que llamaban Cliente ahora se lo denomina Usuario. Deben tener el mismo nombre tanto en la vista como el catálogo.
+
+Respecto al Rationale se justifican la interoperablidad entre los distintos dispositivos, en este caso son móvil y pulsera asociados a una entidad sanitaria.
+
+Concluyendo, pese a la correcta justificación en su mayoría, la vista lógica debería tener algunas entidades y relaciones más.
+
 ### 3.5.2 Vista de procesos
 
 ### 3.5.3 Vista de desarollo
