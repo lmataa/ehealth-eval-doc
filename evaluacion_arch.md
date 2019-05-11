@@ -191,9 +191,9 @@ Para conseguir estos objetivos es fundamental que su definición sea unívoca, s
 
 Referencia | Business Goal | Comentario
 -----------|---------------|-----------
-BG1 | Lograr una gestión eficiente de las citas, de manera que el usuario sea capaz de pedir cita en hospitales y centros de salud de forma sencilla y veloz en cualquier momento. | -
-BG2 | Disposición de los usuarios de un método de asistencia automatizada. Cualquier usuario, especialmente aquellos con *un estado de salud delicado*, estén monitorizados. En caso de accidente, podrán recibir asistencia sanitaria lo más brevemente posible. | -
-BG3 | Identificación de pacientes mediante escáner biométrico. Se presupone más rápido y eficiente el proceso de identificación, especialmente en accidentes y extingue la necesidad de que pacientes tengan que llevar documentación. Tipos considerados: huella dactilar e iris. | -
+BG1 | Lograr una gestión eficiente de las citas, de manera que el usuario sea capaz de pedir cita en hospitales y centros de salud de forma sencilla y veloz en cualquier momento. | Faltan indicadores que permitan verificar el Business Goal.
+BG2 | Disposición de los usuarios de un método de asistencia automatizada. Cualquier usuario, especialmente aquellos con *un estado de salud delicado*, estén monitorizados. En caso de accidente, podrán recibir asistencia sanitaria lo más brevemente posible. | No hemos encontrado definición para estado de salud delicado en el documento original. Faltan indicadores.
+BG3 | Identificación de pacientes mediante escáner biométrico. Se presupone más rápido y eficiente el proceso de identificación, especialmente en accidentes y extingue la necesidad de que pacientes tengan que llevar documentación. Tipos considerados: huella dactilar e iris. | Parece más un Business Driver de un Business Goal de integridad o eficiencia a la hora de identificar pacientes.
 
 :Análisis de Business Goals
 
@@ -201,10 +201,10 @@ En la tabla siguiente se recoge el análisis de los Business Drivers, el cómo s
 
 Referencia | Business Driver | Comentario
 -----------|-----------------|-----------
-BD1 | Desarrollo de un sistema software de gestión de citas conectado con sistemas informáticos de la Seguridad Social y clínicas privadas participantes. | -
-BD2 | Desarrollo de aplicación móvil para el usuario final, podrán pedir tres tipos de cita: normal, extraordinaria, urgencias. | -
-BD3 | Monitorización a través de dispositivos IoT (Pulseras y relojes inteligentes). Mediante la aplicación móvil, los usuarios podrán vincular dispositivos IoT para detectar anomalías vitales como caída o paro cardíaco. En caso de detectar una anomalía semejante el sistema avisará a urgencias de forma automática para que el afectado reciba asistencia médica con la mayor brevedad posible. | -
-BD4 | Identificación de usuarios mediante escáner biométrico. Todo usuario dispone de un perfil virtual con sus datos personales (DNI, NIE, etc.), sus datos de Seguridad Social, seguro de salud privado si procede y datos biométricos bien sea huella dactilar o iris. | -
+BD1 | Desarrollo de un sistema software de gestión de citas conectado con sistemas informáticos de la Seguridad Social y clínicas privadas participantes. | No se menciona el servidor que posteriormente se usará para esta labor.
+BD2 | Desarrollo de aplicación móvil para el usuario final, podrán pedir tres tipos de cita: normal, extraordinaria, urgencias. | Suponemos que este Driver está ligado al segundo Business Goal, por tanto, nos falta información sobre el cómo, no queda claro.
+BD3 | Monitorización a través de dispositivos IoT (Pulseras y relojes inteligentes). Mediante la aplicación móvil, los usuarios podrán vincular dispositivos IoT para detectar anomalías vitales como caída o paro cardíaco. En caso de detectar una anomalía semejante el sistema avisará a urgencias de forma automática para que el afectado reciba asistencia médica con la mayor brevedad posible. | Más cercano a procedimiento que a Business Driver. Se entiende que se usarán dispositivos IoT. En nuestra consideración faltaría mencionar una aclaración al tipo de sistema crítico que se pretende construir, debido a la alta tasa de errores de estos dispositivos biométricos echamos en falta verificación de datos.
+BD4 | Identificación de usuarios mediante escáner biométrico. Todo usuario dispone de un perfil virtual con sus datos personales (DNI, NIE, etc.), sus datos de Seguridad Social, seguro de salud privado si procede y datos biométricos bien sea huella dactilar o iris. | BG3 hecho Business Driver. El BG que pensamos para este Driver sería la identificación de usuarios mediante escáner biométrico.
 
 :Análisis Business Drivers
 
