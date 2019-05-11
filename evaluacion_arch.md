@@ -209,8 +209,7 @@ BD4 | Identificación de usuarios mediante escáner biométrico. Todo usuario di
 :Análisis Business Drivers
 
 ## 3.2 Análisis de patrones arquitectónicos
-
-Un patrón arquitectónico es 
+Los patrones arquitectónicos ayudan a definir las características básicas y comportamientos de una aplicación. Conocer estas características, fortalezas y debilidades de cada patrón es necesario para poder elegir aquel que pueda suplir 
 
 Uno de los aspectos más importantes de los patrones arquitectónicos es que están asociados a diferentes atributos de calidad. Esto quiere decir que existen algunos patrones que representan soluciones abstractas para problemas de rendimiento y otros pueden ser utilizados con éxito en sistemas que requieran de una alta disponibilidad. Al comienzo de la fase de diseño, un arquitecto de software escoge qué patrones arquitectónicos se adaptan más confortablemente a las necesidades de calidad deseadas para el sistema objetivo.
 
