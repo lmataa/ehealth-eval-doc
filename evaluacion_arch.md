@@ -101,13 +101,13 @@ El presente documento se ha organizado como sigue:
 
 # 2. Fase 0: Preparación
 
-En esta fase de la evaluación ATAM, se le da comienzo al proceso de evaluación. En primer lugar, como actiidad principal, el equipo va a organizar el proyecto de evaluación mediante reuniones, planificaciones logísticas, calendario, acuerdo de puntos en común, etc. El equipo puede presentar un NDA para que sea firmado por el equipo de evaluación y que así queden protegidos los secretos comerciales al respecto de la arquitectura en cuestión.
+En esta fase de la evaluación ATAM, se le da comienzo al proceso de evaluación. En primer lugar, como actiidad principal, el equipo va a organizar el proyecto de evaluación mediante reuniones, planificaciones logísticas, calendario, acuerdo de puntos en común, etc. Se presentó un NDA para ser firmado por el equipo de evaluación y que así queden protegidos los secretos comerciales al respecto de la arquitectura en cuestión.
 
-Hemos utilizado...
+Hemos utilizado una planificación ágil para el desarrollo de la evaluación arquitectónica de forma que, llevando un control de versiones del documento mediante GitHub, hemos podido trabajar colaborativamente y ajustar las puestas en común del presente documento a lo largo de las reuniones propuestas.
 
-Nuestro caso...
+En nuestro caso la evidencia de las reuniones realizadas se reflejan en el anexo 1. La primera es la puestá en común y presentación de la arquitectura, reflejada en el acta 1.
 
-Se presenta un calendario de reuniones propuestas...
+A continuación en presenta un calendario de reuniones propuestas.
 
 Semana | Fase ATAM / Objetivos reunión | Reunión equipo evaluado 
 -------|-------------------------------|------------------------
@@ -225,7 +225,9 @@ A continuación se prodece a la identificación de los patrones arquitectonicos 
 
 ### 3.2.1 Microservices
 
+El equipo evaluado identifica en la vista de procesos un patrón arquitectónico de microservicios para los procesos realizados en el back-end del servidor donde se procesan los servicios. Sin embargo y debido a cariz de aplicación crítica que se presupone en los Business Goals, este patrón si bien puede crear aplicaciones implementadas que funcionen muy bien, en general este patrón no se presta a aplicaciones de alto rendimiento debido su naturaleza distribuida.
 
+Por otro lado la testabilidad y la escalabilidad del sistema tratado se ven directamente afecadas positivamente por este patrón. De forma que cada proceso del sistema sería más sencillo de probar. Así mismo sería muy versátil para la adaptación de cambios o extensión de la aplicación para und desarrollo continuo en el futuro.
 
 ### 3.2.2 Event-Driven
 
@@ -259,7 +261,7 @@ Testabilidad | Baja | El sistema se debe poder probar de forma sencilla.
 :Atributos de calidad
 
 Atributo de calidad | Atributo refinado | Architecture Significant Requirement
---------------------|-------------------|-------------------------------------
+--------------------|-------------------|-------------------------------------un 5
 Disponibilidad | Tiempo disponible | El sistema estará disponible 24 del día, todos los días del año 
  - | Horario de actualización | En caso de que sea necesario mantenimiento o actualización, se llevará a cabo de 3 AM a 5 AM y no se inhabilitarán todas las funcionalidades, solo aquellas que vayan a ser actualizadas o mantenidas.
 Interoperabilidad | Conexión con otros sistemas | El sistema se comunicará con los sistemas informáticos de la sanidad pública y las clínicas privadas que participen en el sistema
