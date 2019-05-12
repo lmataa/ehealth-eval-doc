@@ -261,35 +261,55 @@ Testabilidad | Baja | El sistema se debe poder probar de forma sencilla.
 :Atributos de calidad
 
 Atributo de calidad | Atributo refinado | Architecture Significant Requirement
---------------------|-------------------|-------------------------------------un 5
+--------------------|-------------------|-------------------------------------
 Disponibilidad | Tiempo disponible | El sistema estará disponible 24 del día, todos los días del año 
  - | Horario de actualización | En caso de que sea necesario mantenimiento o actualización, se llevará a cabo de 3 AM a 5 AM y no se inhabilitarán todas las funcionalidades, solo aquellas que vayan a ser actualizadas o mantenidas.
 Interoperabilidad | Conexión con otros sistemas | El sistema se comunicará con los sistemas informáticos de la sanidad pública y las clínicas privadas que participen en el sistema
 - | Conexión con dispositivos | El sistema será compatible con dispositivos de monitorización tipo relojes y pulseras inteligentes (inicialmente Apple Watch, Samsung Galaxy Watch, Samsung Gear Fit 2, Xiaomi Mi Band 2 y 3, Armazfit Bip, Fitbit Versa y Fitbit Inspire)
 Rendimiento | Tiempo de respuesta (cita) | Cuando un usario solicita una cita el tiempo de respuesta del sistema para asignarle la cita no será mayor de 5 segundos.
-- | Tiempo de respuesta (llamada a emergencias) | Cuando uno de los dispositivos de monitorización detecta una parada cardíaca o caída, el sistema responderá llamando a emergencias en un plazo máximo de 20 segundos
+- | Tiempo de respuesta (llamada a emergencias) | Cuando uno de los dispositivos de monitorización detecta una parada cardíaca o caída, el sistema responderá llamando a emergencias en un plazo máximo de 20 segundos.
 
 :Árbol de utilidad original
 
-A continuación, se procede al análisis de los atributos de calidad cruzados con los Business Goals.
+A continuación, se procede al análisis de los atributos de calidad a partir de los Business Goals.
 
 Atributo de calidad | Prioridad | Justificación | Análisis
 --------------------|-----------|---------------|---------
-Atributo | Número | Texto del atributo | Nuestro análisis
+Disponibilidad | Alta | Monitorización en tiempo real y detección de anomalías en tiempo real. Sistema de emergencia sanitario, por lo tanto crítico, y no puede fallar además de estar disponible en todo momento. | Se detecta de **GB1**. Consideramos que este sistema requiere de un nivel de disponibilidad muy alto, especialmente si hay vidas humanas de por medio. Por lo que categorizamos el sistema como crítico. Es un atributo de vital importancia.
+Interoperabilidad | Alta | El sistema establecerá comunicaciones con sistemas informáticos ajenos como el de sanidad pública y será compatible con dispositivos de monitorización tipo relojes y pulseras inteligentes (IoT). | A
+Rendimiento | Alta | Tiempo de respuesta, sincronización y reconocimiento de patrones biométricos en un tiempo aceptable. | A
+Seguridad | Media | Solo podrán acceder a los datos personales las personas autorizadas. Los datos deben ser íntegros y protegidos frente a modificaciones. Sistema de autenticación. | A
+Usabilidad | Baja | Aplicación accesible y fácil de usar por ser de uso general con usuarios no expertos. | A
+Modificabilidad | Baja | Se podrán realizar cambios en la aplicación con bajo coste. Pensamos que de forma continua sería una adición. No está contemplado en los Business Goals. | A
+Testabilidad | Baja | Verificable y validable. El equipo quiere que sea fácil y rápida de probar. | A 
+Escalabilidad | Media | Adaptable a cambios y extensiones. Márgenes planteados para aceptar aumentos significativos de datos y usuarios. | A
+Portabilidad | Media | Compatibilidad con Android e iOS | A
 
 :Ánalisis de atributos de calidad con Business Goals
 
 A continuación, se analiza el árbol de utilidad, planteando cómo podrían quedar los atributos de calidad y refinados, la prioridad que identificamos en base al análisis de Business Goals, y el impacto global en la arquitectura y el valor de negocio, de cada uno de ellos. En algunos casos los atributos se verán modificados y en otros podría ser propuesta su eliminación. 
 
-Atributo de calidad | Atributo refinado | Prioridad | Justificación
---------------------|-------------------|-----------|--------------
-Atributo (nuevo o no) | Atributo refinado (nuevo o no) | Prioridad nuestra | Justificación de las decisiones tomadas
+Atributo de calidad | Atributo refinado | Prioridad | Justificación de las decisiones
+--------------------|-------------------|-----------|---------------------------
+Confiabilidad | Disponibilidad | 1 | Al tratarse de un sistema crítico, debe estar planteado desde el primer momento en el diseño una disponibilidad 24/7 para evitar posibles daños a pacientes u otros inconvenientes. (**H,H**). ASR: Como cliente quiero que el sistema de alertas y emergencias esté disponible para detectarlas al menos un 99,90% del tiempo.
+ - | Reconocimiento de patrones | - | La identificación de datos biométricos debe ser fehaciente a la realidad y ser confiable en cuanto a fallos, además de realizar la identificación en menos de medio segundo. (**H,L**). ASR: Como cliente quiero que el sistema reconozca con una tolerancia del 96% y en menos de medio segundo quién soy utilizando mis datos biométricos.
+ Rendimiento | Time behaviour | 2 | Dada la cantidad de información que maneja el sistema y que ha de disponerse de ella en tiempo real, el tiempo de respuesta al usuario debe ser mínimo. (**H,H**). ASR: Como cliente quiero poder notificar emergencias en menos de 5 segundos y citas en menos de 20 segundos.
+ - | Utilización de recursos | - | La sincronización de los dispositivos exige un escenario de tiempo real, por lo que deben minimizarse las diferencias de tiempo entre los datos en el servidor y los recién captados. (**H,H**). ASR: Como cliente quiero que la informaicón del sensor sea procesada por el sistema en menos de 2 segundos.
+ Seguridad | Integridad | 3 | Los datos estarán protegidos frente a modificaciones no autorizadas (ej: Man-in-the-middle). (**M,H**). ASR: Como cliente quiero que mis datos personales estén protegidos y estén correspondidos con la realidad captada.
+- | Control de accesos | - | Determinadas funciones del sistema deben estar restringidas a perfiles concretos de usuario. Como la calibración de dispositivos, o el acceso a identificadores biométricos. (**L,M**) ASR: Como cliente quiero que al sistema solo puedan acceder ciertos perfiles establecidos, especialmente a la configuración de dispositivos de captación de datos sensibles.
+- | Confidencialidad | - | Dado el tipo de información personal y médica que procesa el sistema, ningunas terceras partes podrán acceder a estos datos personales. Los responsables de datos deben firmar y someterse a la responsabilidad del trato de dichos datos. (**H,H**). ASR: Como cliente quiero ejercer mi derecho de privacidad y proteger así mis datos personales.
+Usabilidad | Facilidad de uso | 5 | Al tratarse de una aplicación de uso general y no especialista, debe ser fácil de usar para todo el mundo. (**L,M**). ASR: Como cliente quiero que la aplicación sea fácil de usar para garantizar un uso universal de la misma, especialmente al tratarse de un sistema e-health.
+- | Accesibilidad | - | Además de ser fácil de usar, el sistema se contempla accesible universalmente, para establecer su uso a personas con limitaciones cognitivas, o sensoriales. (**M,L**). ASR: Como cliente quiero poder usar la aplicación sea cual sea mi condición física o psíquica.
+Mantenibilidad | Escalabilidad | 4 | El sistema debe estar diseñado desde el principio para poder escalar horizontalmente, esto es, dar respuesta al incremento de usuarios previsto. (**H,M**). ASR: Como cliente quiero que el sistema sea escalable horizontalmente para no experimetar pérdidas de rendimiento con la popularización del uso en incrementos contemplados del 30% de usuarios, en un tiempo de 5 días/persona.
+- | Modificabilidad | - | El sistema debe estar diseñado para soportar cambios de funcionalidad pertinentes de acuerdo con las posibles espeficicaciones de los stakeholders. Además se trata de un sistema en fases de prueba por lo que debe estar especialmente preparado para esto. (**M,H**). ASR: Como cliente el sistema debe poder ser lo suficientemente flexible como para incluir cambios de funcionalidad solicitados por stakeholders.
+- | Testabilidad | - | Al tratarse de un sistema crítico, la correcta funcionalidad de todos los componentes debe estar verificada y validada con un umbral de tolerancia del 100% en los procesos críticos y un 80% en los componentes de interfaz. (**M,H**). ASR: Como cliente quiero que la aplicación esté validada y verificada, para no comprometer a los pacientes a fallos del sistema en cuestiones vitales.
+Portabilidad | Adaptabilidad | 6 | La aplicación final de usuario del sistema debe poder ejecutarse tanto en Android como en iOS. Se pretende la universalización del sitema en cuanto a dispositivos. (**L,H**). ASR: Como cliente quero que el 100% de las funcionalidades de usuario se puedan realizar desde dispositivos Android e iOS.
 
 :Árbol de utilidad propuesto
 
-Del análisis de los atributos de calidad y árbol de utilidad, detectamos que, ...
+Del análisis de los atributos de calidad y árbol de utilidad, decidimos la reestructuración anterior por su compresión y en nuestra consideración, por su mejor etiquetado de atributos refinados. Así mismo eliminamos algunos atributos de calidad que consideramos que no tienen relevancia cruzada en el sistema. Siendo la nueva especificación propuesta más acorde a lo que se pretende conseguir con los Business Goals. Especialmente, cabe hacer incapié en los atributos refinados de **mantenibilidad**, que es el atributo de calidad nuevo que más sufre refactorización.
 
-Así mismo, del análisis de los Business Goals ...
+Así mismo, del análisis de los Business Goals, echamos en falta algún Business Goal conforme a como se presentó originalmente el sistema. Así mismo, no se presentaban con etiquetas reconocibles en el documento orginal por lo que hemos procedido a asignarles un nombre con el formato **BG1** para referirnos a ellos. A parte de ser muy breves, también consideramos que se han pasado por alto identificar métricas para los mismos.
 
 ## 3.4 Análisis de stakeholders
 
@@ -297,15 +317,21 @@ Grupos de prioridad identificados por el equipo de proyecto y nuestra reflexión
 
 ## 3.5 Análisis de vistas
 
-Intro de sección
+Para analizar el sistema usaremos el sistema de 4+1 vistas de Kruchten, que consiste en las siguientes vistas, las cuales detallaremos en esa subsección.
 
 - Vista lógica
 - Vista de procesos
 - Vista de desarrollo
 - Vista física o de despliegue
-- Escenarios
+- Vista de escenarios
 
 ### 3.5.1 Vista lógica
+
+#### Descripción
+
+La vista lógica está relacionada con los requisitos funcionales y la estructra de clases conceptual que se va a usar en el sistema una vez construido. El objetivo es mostrar los componentes software del sistema y sus relaciones.
+
+#### Análisis
 
 Para la elaboración de esta vista han utilizado la notación UML de diagramas de clases estándar, donde comentan que cada entidad, representada por un cuadro con su nombre, donde mencionan la cardinalidad, pero no justfican el porqué de todas esas cardinalidades y creemos que es importante, puesto que para entender la vista en su totalidad, un apartado como las cardinalidades y la explicación de las mismas es necesario para comprender todas las relaciones. 
 
@@ -317,13 +343,49 @@ Respecto al Rationale se justifican la interoperablidad entre los distintos disp
 
 Concluyendo, pese a la correcta justificación en su mayoría, la vista lógica debería tener algunas entidades y relaciones más.
 
+#### Atributos de calidad
+
+
 ### 3.5.2 Vista de procesos
+
+#### Descripción
+
+El objetivo de un diagrama de procesos es mostrar uno o varios procesos del sistema software o del negocio mediante un flujo de trabajo. Este flujo comienza en un punto inicial y a continuación por una serie de tareas que pueden ser iterativas hasta llegar al punto final.
+
+#### Análisis
+
+#### Justificación
 
 ### 3.5.3 Vista de desarollo
 
+#### Descripción
+
+El objetivo del diagrama de componentes es la organización del software en módulos para su desarrollo. Se pueden organizar los componentes en caoas o interfaces para su mejor comprensión. Lo cual lo facilitará la intuición de estos paquetes de software a la hora de implementar y desarrollar el sistema. 
+
+#### Análisis
+
+#### Justificación
+
 ### 3.5.4 Vista de despliegue
 
+#### Descripción
+
+La vista de despliegue tiene como objetivo asociar a cada elemento de las vistas anteriores un dispositivo físico donde se ejecutarán o residirán dichos componentes. Hablamos de redes, procesos, tareas, objetos, en diferentes nodos de este diagrama que podrán ser servidores, nodos de red, dispositivos finales ...
+
+#### Análisis
+
+#### Justificación
+
 ### 3.5.5 Vista de escenarios
+
+#### Descripción
+
+La vista de escenarios nos ofrece la posibilidad de mostrar las diferentes formas que tienen los usuarios de interactuar con el sistema.
+
+#### Análisis 
+
+#### Justificación
+
 
 ## 3.6 Identificación de puntos de sensibilidad
 
