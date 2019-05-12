@@ -273,8 +273,8 @@ Rendimiento | Tiempo de respuesta (cita) | Cuando un usario solicita una cita el
 
 A continuación, se procede al análisis de los atributos de calidad a partir de los Business Goals.
 
-Atributo de calidad | Prioridad | Justificación | Análisis
---------------------|-----------|---------------|---------
+Atributo de calidad | Prioridad | Justificación   | Análisis realizado
+--------------------|-----------|---------------|-------------------------------
 Disponibilidad | Alta | Monitorización en tiempo real y detección de anomalías en tiempo real. Sistema de emergencia sanitario, por lo tanto crítico, y no puede fallar además de estar disponible en todo momento. | Se detecta de **GB1**. Consideramos que este sistema requiere de un nivel de disponibilidad muy alto, especialmente si hay vidas humanas de por medio. Por lo que categorizamos el sistema como crítico. Es un atributo de vital importancia.
 Interoperabilidad | Alta | El sistema establecerá comunicaciones con sistemas informáticos ajenos como el de sanidad pública y será compatible con dispositivos de monitorización tipo relojes y pulseras inteligentes (IoT). | No se menciona en los BG, se presuone por la descripción y los drivers. Quizás asociable con **BG2**.
 Rendimiento | Alta | Tiempo de respuesta, sincronización y reconocimiento de patrones biométricos en un tiempo aceptable. | Detectado de **BG1**. Sin métricas asociadas en BG.
