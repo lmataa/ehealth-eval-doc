@@ -354,7 +354,7 @@ El objetivo de un diagrama de procesos es mostrar uno o varios procesos del sist
 
 #### Análisis
 
-#### Justificación
+#### Justificación: Atributos de calidad
 
 ### 3.5.3 Vista de desarollo
 
@@ -364,7 +364,24 @@ El objetivo del diagrama de componentes es la organización del software en mód
 
 #### Análisis
 
-#### Justificación
+Se especifican tres diagramas en el documento original. Los tres corresponden a cada dispositivo del sistema: Entidad sanitaria, móvil y pulsera. Sin embargo no aparece por ningún lado el servidor ni los paquetes de componentes software de esta máquina. Lo consideramos una falta de información importante.
+
+Se considera que todo el procese lo realiza esta máquina y pese a ello no disponemos de información en esta vista para su análisis. Sin embargo los paquetes software de los dispositivos finales están bien organizados. Los tres siguen arquitectura en capas.
+
+Se desacopla correctamente la interfaz de la lógica y de la comunicación de cada dispositivo, permitiendo así un trabajo ágil y modificable como se indica en los atributos de calidad.
+
+
+#### Justificación: Atributos de calidad
+
+Con vistas a nuestro nuevo árbol de utilidad propuesto, cabría utilizar componentes de reflexión para saber el estado del sistema en cada momento y así, además de monitorizar datos de pacientes, podría monitorizarse el flujo de datos dentro del sistema y así poder redirigir los canales saturados. Esto llevaría el atributo de calidad de mantenibilidad a un nivel superior.
+
+No se ve reflejada la disponibilidad que es el atributo más importante y debería ir de la parte del servidor, capaz de recoger los eventos lanzados por estos dispositivos.
+
+Otra consideración a tener en cuenta es el uso de un patrón de broker, que podría aplicarse de cara a la captación de eventos por el servidor (ausente).
+
+Si bien, se refleja la interoperabilidad en comunicación de los componentes, pero eliminamos este atributo de calidad por obvio, ya que se entiende que componentes diferentes de este sistema estarán conectados para interactuar tal y como se especifica.
+
+Tampoco se refleja el atributo de rendimiento y seguridad por el lado de esta vista, para reflejarlo podrían incluirse paquetes de componentes que traten ambos problemas. 
 
 ### 3.5.4 Vista de despliegue
 
@@ -374,7 +391,7 @@ La vista de despliegue tiene como objetivo asociar a cada elemento de las vistas
 
 #### Análisis
 
-#### Justificación
+#### Justificación: Atributos de calidad
 
 ### 3.5.5 Vista de escenarios
 
@@ -384,8 +401,7 @@ La vista de escenarios nos ofrece la posibilidad de mostrar las diferentes forma
 
 #### Análisis 
 
-#### Justificación
-
+#### Justificación: Atributos de calidad
 
 ## 3.6 Identificación de puntos de sensibilidad
 
