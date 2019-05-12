@@ -276,14 +276,14 @@ A continuación, se procede al análisis de los atributos de calidad a partir de
 Atributo de calidad | Prioridad | Justificación | Análisis
 --------------------|-----------|---------------|---------
 Disponibilidad | Alta | Monitorización en tiempo real y detección de anomalías en tiempo real. Sistema de emergencia sanitario, por lo tanto crítico, y no puede fallar además de estar disponible en todo momento. | Se detecta de **GB1**. Consideramos que este sistema requiere de un nivel de disponibilidad muy alto, especialmente si hay vidas humanas de por medio. Por lo que categorizamos el sistema como crítico. Es un atributo de vital importancia.
-Interoperabilidad | Alta | El sistema establecerá comunicaciones con sistemas informáticos ajenos como el de sanidad pública y será compatible con dispositivos de monitorización tipo relojes y pulseras inteligentes (IoT). | A
-Rendimiento | Alta | Tiempo de respuesta, sincronización y reconocimiento de patrones biométricos en un tiempo aceptable. | A
-Seguridad | Media | Solo podrán acceder a los datos personales las personas autorizadas. Los datos deben ser íntegros y protegidos frente a modificaciones. Sistema de autenticación. | A
-Usabilidad | Baja | Aplicación accesible y fácil de usar por ser de uso general con usuarios no expertos. | A
-Modificabilidad | Baja | Se podrán realizar cambios en la aplicación con bajo coste. Pensamos que de forma continua sería una adición. No está contemplado en los Business Goals. | A
-Testabilidad | Baja | Verificable y validable. El equipo quiere que sea fácil y rápida de probar. | A 
-Escalabilidad | Media | Adaptable a cambios y extensiones. Márgenes planteados para aceptar aumentos significativos de datos y usuarios. | A
-Portabilidad | Media | Compatibilidad con Android e iOS | A
+Interoperabilidad | Alta | El sistema establecerá comunicaciones con sistemas informáticos ajenos como el de sanidad pública y será compatible con dispositivos de monitorización tipo relojes y pulseras inteligentes (IoT). | No se menciona en los BG, se presuone por la descripción y los drivers. Quizás asociable con **BG2**.
+Rendimiento | Alta | Tiempo de respuesta, sincronización y reconocimiento de patrones biométricos en un tiempo aceptable. | Detectado de **BG1**. Sin métricas asociadas en BG.
+Seguridad | Media | Solo podrán acceder a los datos personales las personas autorizadas. Los datos deben ser íntegros y protegidos frente a modificaciones. Sistema de autenticación. | En los BG no se recoge ninguna restricción de seguridad.
+Usabilidad | Baja | Aplicación accesible y fácil de usar por ser de uso general con usuarios no expertos. | Nada deducible directamente de los BG. Es importante que sea usable si los usuarios finales de la aplicación no son expertos.
+Modificabilidad | Baja | Se podrán realizar cambios en la aplicación con bajo coste. Pensamos que de forma continua sería una adición. No está contemplado en los Business Goals. | No deducible de los BG, quizás en **BG1** al tratar la gestión eficiente, lo cual implicaría que se pudiese modificar con facilidad, con la suficiente abstracción.
+Testabilidad | Baja | Verificable y validable. El equipo quiere que sea fácil y rápida de probar. | Nada deducible delos BG. Pero al tratarse de un sistme crítico lo consideramos uno de los atributos más importantes. Debe estar todo probado y funcionar correctamente. No se puede tolerar que un fallo software se pueda cobrar una vida humana.
+Escalabilidad | Media | Adaptable a cambios y extensiones. Márgenes planteados para aceptar aumentos significativos de datos y usuarios. | No deducible de los BG, importante para un sistema de este tipo, al ser un sistema ehealth que pretende captar usuarios de población civil en una ciudad.
+Portabilidad | Media | Compatibilidad con Android e iOS | Nada derivable de los BG. No es muy importante que sea portable al principio debido a que las aplicaciones de un sistema de este tipo con el diseño adecuado, pueden ser fácilmente desplegadas a dispositivos finales.
 
 :Ánalisis de atributos de calidad con Business Goals
 
