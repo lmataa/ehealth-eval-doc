@@ -391,7 +391,21 @@ La vista de despliegue tiene como objetivo asociar a cada elemento de las vistas
 
 #### Análisis
 
+En esta vista si aparece el componente de servidor como un nodo donde se ejecutan procesos. Esto no se veía reflejado en el diagrama de desarrollo. 
+
+Aparece por primera vez una base de datos que no estaba contemplada en el documento hasta este momento. Se mencionan historiales de pacientes cosa no descrita en los BG.
+
+Por lo demás queda lo suficientemente claro e ilustrativo de cómo se desplegará el sistema.
+
 #### Justificación: Atributos de calidad
+
+Según se indica, están bien mapeados los componentes del diagrama de procesos. Sin embargo no está bien mapeado con el diagrama de componentes, lo cual supone una inconsistencia.
+
+Se refleja la interoperabilidad inicialmente planteada pero eliminada por el equipo de evaluación por motivos obvios.
+
+Nos faltaría para tener un sistema consistente con sus BG, un servidor de backup para mantener la disponibilidad del sistema. Requisito de prioridad máxima, tal y como se ha identificado. Esto supondría una mejora de calidad importante para el sistema propuesto.
+
+Para la disponibilidad en los canales de comunicación se proponen canales alternativos o cableados en caso de fallo para garantizar también la disponibilidad que este sistema crítico debe tener.
 
 ### 3.5.5 Vista de escenarios
 
