@@ -339,11 +339,11 @@ A nuestro parecer faltaría al menos una relación más, en concreto entre clien
 
 Se ha encontrado una inconsistencia en el Catálogo. En la vista hay un total de 5 entidades: Cliente, Pulsera, Móvil, Cuenta y Entidad Sanitaria. Sin embargo a la hora de mencionarlos y desarrollarlos en el catálogo, a lo que llamaban Cliente ahora se lo denomina Usuario. Deben tener el mismo nombre tanto en la vista como el catálogo.
 
-Respecto al Rationale se justifican la interoperablidad entre los distintos dispositivos, en este caso son móvil y pulsera asociados a una entidad sanitaria.
-
 Concluyendo, pese a la correcta justificación en su mayoría, la vista lógica debería tener algunas entidades y relaciones más.
 
 #### Atributos de calidad
+
+Respecto al Rationale se justifican la interoperablidad entre los distintos dispositivos, en este caso son móvil y pulsera asociados a una entidad sanitaria.
 
 
 ### 3.5.2 Vista de procesos
@@ -415,7 +415,19 @@ La vista de escenarios nos ofrece la posibilidad de mostrar las diferentes forma
 
 #### Análisis 
 
+En este caso para la vista de escenario se ha usado la notación UML estándar para casos de uso, explicando de forma muy completa cada elemento usado y su función. En concreto: Actor, caso de uso, ventana y asociación, cada uno representado con una imagen para su correcta identificación.
+
+Se nos presenta un caso de uso que representa la interacción de los diferentes elementos del sistema. Consta de cuatro actores: Entidad sanitaria, Servidor, Móvil y Banda inteligente, y éstos, a su vez, estan asociados mediante relaciones con los elementos del sistema, que son: Gestión de citas, Recepción y gestión de datos biométricos y aviso de emergencia. En el caso de uso vemos como los distintos dispositivos y entidades interaccionan con los elementos del sistema, pero en ningún momento se muestra de que forma los usuarios/clientes hacen uso de ellos, por lo que sse podría añadir un quinto actor "Cliente". 
+
+Respecto al catálogo, se justifica de forma correcta cada elemento del sistema.
+
 #### Justificación: Atributos de calidad
+
+Se comentan dos atributos de calidad:
+
+- Interoperabilidad: en el caso de uso al tener elementos que se corresponden con dispositivos se puede observar fácilmente la relación que existe entre ellos y como interaccionan.
+
+- Testabilidad: la explicación puede dar lugar a dudas, y además, no podemos ver si los elementos del sistema funcionan de forma correcta y/o óptima, por lo que se podría suprimir la testabilidad de este apartado al no tener una justificación del todo convincente. 
 
 ## 3.6 Identificación de puntos de sensibilidad
 
