@@ -443,8 +443,18 @@ Se comentan dos atributos de calidad:
 
 Se definen los puntos de sensibilidad de un sistema, como los componentes críticos para el éxito (correcto funcionamiento) del mismo. De la evaluación de la arquitectura propuesta hemos identificado los siguientes:
 
-- PS1: Justificación
-- PS2: Justificación ...
+• PS1: Calibración del sensor de la pulsera: Es importante para el sistema que el sensor de la pulsera este correctamente calibrado y revisado periódicamente para asegurarnos que las mediciones son correctas, en caso contrario podremos tener 2 problemas de diferente gravedad, que serían:
+
+1.	El sensor mida erróneamente y genera un aviso de emergencia cuando el paciente está bien, generaría falsas alertas que no son necesarias, es problemático, pero no peligra la salud del paciente.
+2.	El sensor no mida una emergencia real por un problema de salud del paciente y no se genera la alerta, esto hace peligrar la salud del paciente.
+
+• PS2: Conectividad entre la pulsera y el teléfono móvil: Perder la conectividad entre el sensor de la pulsera y el teléfono móvil es crítico para el sistema. Sin esta conexión, el sistema no recibe las alertas de emergencia, aunque se estén produciendo.
+
+• PS3: Conectividad entre el teléfono móvil y el servidor: Perder la conectividad entre el teléfono móvil y el servidor es crítico para el sistema. Sin esta conexión, el sistema no recibe las alertas de emergencia, aunque se estén produciendo.
+
+• PS4: Necesidad de batería de gran capacidad para asegurar durabilidad en la
+comunicación entre la pulsera y el teléfono móvil y entre el teléfono móvil y el servidor: Se necesitará la mayor autonomía posible en la batería de nuestros dispositivos, especialmente de la pulsera que mide las variables del paciente.
+
 
 ## 3.7 Identificación de puntos de equilibrio
 
