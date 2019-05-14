@@ -358,7 +358,7 @@ Para el desarrollo del diagrama de actividades han utilizado el estándar UML, d
 
 Analizando la vista de procesos, la estructura basándonos en los “business goals” no me parece correcta por los siguientes motivos:
 
-1.	Los avisos de emergencia no están bien definidos entre la pulsera, el teléfono móvil y el servidor que genera la llamada
+1.	Los avisos de emergencia no están bien definidos entre la pulsera, el teléfono móvil y el servidor que genera la llamada.
 2.	No se hace mención a los sistemas biométricos para reconocer al paciente.
 
 
