@@ -364,7 +364,7 @@ Analizando la vista de procesos, la estructura basándonos en los “business go
 
 #### Justificación: Atributos de calidad
 
-Se resalta la importancia de la interoperabilidad entre los diferentes elementos del sistema como son la pulsera, el teléfono móvil y el servidor para el correcto funcionamiento del sistema utilizado estos elementos para cumplir las funciones de la aplicación
+Se resalta la importancia de la interoperabilidad entre los diferentes elementos del sistema como son la pulsera, el teléfono móvil y el servidor para el correcto funcionamiento del sistema utilizando estos elementos para cumplir las funciones de la aplicación
 
 ### 3.5.3 Vista de desarollo
 
