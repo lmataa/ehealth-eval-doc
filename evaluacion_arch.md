@@ -460,8 +460,15 @@ comunicación entre la pulsera y el teléfono móvil y entre el teléfono móvil
 
 Se definen los puntos de equilibrio de un sistema como una propiedad que afecta a más de un atributo de calidad o punto de sensibilidad. De la evaluación de la arquitectura propuesta, hemos identificado los siguientes:
 
-- PE1: Justificación
-- PE2: Justificación
+• PE1: Es preferible tener capacidad de procesamiento suficiente para poder procesar
+los datos de los sensores de forma concurrente en tiempo real, para no tener demoras
+en las alertas, sobre la capacidad de almacenamiento para no perder datos en el
+servidor. El principal objetivo del sistema es procesar los datos de los sensores de las pulseras para alertar al usuario. La capacidad de almacenar datos para no perder registros en el
+servidor es menos prioritaria que la mencionada, ya que aporta menor valor de
+negocio.
+
+• PE2: Es preferible más duración de la batería de la pulsera antes que su tamaño o estética.
+La función principal de la pulsera es enviar las alertas de emergencia, necesitamos una autonomía mínima de 24 horas enviando los datos, pondremos este aspecto con mayor importancia que una estética o tamaño mas reducido para garantizar el buen funcionamiento del sistema.
 
 
 ## 3.8 Identificación de riesgos
