@@ -354,7 +354,17 @@ El objetivo de un diagrama de procesos es mostrar uno o varios procesos del sist
 
 #### Análisis
 
+Para el desarrollo del diagrama de actividades han utilizado el estándar UML, de forma que sea accesible y fácilmente interpretable para el mayor número de personas. 
+
+Analizando la vista de procesos, la estructura basándonos en los “business goals” no me parece correcta por los siguientes motivos:
+
+1.	Los avisos de emergencia no están bien definidos entre la pulsera, el teléfono móvil y el servidor que genera la llamada
+2.	No se hace mención a los sistemas biométricos para reconocer al paciente.
+
+
 #### Justificación: Atributos de calidad
+
+Se resalta la importancia de la interoperabilidad entre los diferentes elementos del sistema como son la pulsera, el teléfono móvil y el servidor para el correcto funcionamiento del sistema utilizado estos elementos para cumplir las funciones de la aplicación
 
 ### 3.5.3 Vista de desarollo
 
