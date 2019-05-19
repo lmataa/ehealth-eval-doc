@@ -561,9 +561,9 @@ N/A
 
 :Escenario 3
 
-Decisiones arquitectónicas | Decisión | Sensibilidad | Equilibrio | Riesgos | No riesgos 
+Decisiones arquitectónicas | Sensibilidad | Equilibrio | Riesgos | No riesgos 
 ---------------------------|----------|--------------|------------|------|----
- decision | - | - | - | - | -
+ decision | - | - | - | - 
 
 :Escenario 3 decisiones
 
@@ -575,18 +575,18 @@ Explicación
 
 ### 4.1.4 Escenario 4
 
- Escenario: 4 | Como cliente quiero que el sistema ...
+ **Escenario: 4** | Como cliente quiero que el sistema ...
 -------------|---------------------------------------
-Atributo | Nombre de atributo
-Contexto | -
-Estímulo | -
-Respuesta | -
+**Atributo** | Nombre de atributo
+**Contexto** | -
+**Estímulo** | -
+**Respuesta** | -
 
 :Escenario 4
 
-Decisiones arquitectónicas | Decisión | Sensibilidad | Equilibrio | Riesgos | No riesgos 
+Decisiones arquitectónicas | Sensibilidad | Equilibrio | Riesgos | No riesgos 
 ---------------------------|----------|--------------|------------|------|----
- decision | - | - | - | - | -
+ decision | - | - | - | - 
 
  :Escenario 4 decisiones
 
@@ -599,7 +599,7 @@ Explicación
 
 ### 4.1.5 Escenario 5
 
- Escenario: 5 | Como cliente quiero que el sistema ...
+ **Escenario: 5** | Como cliente quiero que el sistema ...
 -------------|---------------------------------------
 Atributo | Nombre de atributo
 Contexto | -
@@ -608,9 +608,9 @@ Respuesta | -
 
 :Escenario 5
 
-Decisiones arquitectónicas | Decisión | Sensibilidad | Equilibrio | Riesgos | No riesgos 
+Decisiones arquitectónicas | Sensibilidad | Equilibrio | Riesgos | No riesgos 
 ---------------------------|----------|--------------|------------|------|----
- decision | - | - | - | - | -
+ decision | - | - | - | -
 
  :Escenario 5 decisiones
 
@@ -620,6 +620,28 @@ Explicación
 
 #### 4.1.5.2 Diagrama arquitectónico
 
+### 4.1.6 Escenario 6
+
+ **Escenario: 6** | Como cliente quiero que el sistema ...
+-------------|---------------------------------------
+Atributo | Nombre de atributo
+Contexto | -
+Estímulo | -
+Respuesta | -
+
+:Escenario 6
+
+Decisiones arquitectónicas | Sensibilidad | Equilibrio | Riesgos | No riesgos 
+---------------------------|----------|--------------|------------|------|----
+ decision | - | - | - | -
+
+ :Escenario 6 decisiones
+
+#### 4.1.6.1 Razonamiento
+
+Explicación
+
+#### 4.1.6.2 Diagrama arquitectónico
 
 # 5. Fase 3:  Follow-up
 
