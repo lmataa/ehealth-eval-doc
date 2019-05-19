@@ -455,6 +455,7 @@ Se definen los puntos de sensibilidad de un sistema, como los componentes críti
 • **PS4**: Necesidad de batería de gran capacidad para asegurar durabilidad en la
 comunicación entre la pulsera y el teléfono móvil y entre el teléfono móvil y el servidor: Se necesitará la mayor autonomía posible en la batería de nuestros dispositivos, especialmente de la pulsera que mide las variables del paciente.
 
+. **PS5**: Necesidad de un plan de mantenimiento exhaustivo en el tiempo para incorporar valor de negocio y reducir la deuda técnica del sistema. CI/CD es fundamental para hacer entregars iterativas y poder corregir rápidamente el sistema. De carecer de un gestor de este tipo, el sistema puede conducirse al caos rápidamente conforme escale.
 
 ## 3.7 Identificación de puntos de equilibrio
 
@@ -492,59 +493,71 @@ En está sección se presenta el análisis de escenarios. El objetivo es contar 
 
 ### 4.1.1 Escenario 1
 
- Escenario: 1 | Como cliente quiero que el sistema ...
+ **Escenario: 1** | Como cliente quiero que el sistema de alertas y emergencias esté disponile para detectarlas al menos un 99,90% del tiempo.
 -------------|---------------------------------------
-Atributo | Nombre de atributo
-Contexto | -
-Estímulo | -
-Respuesta | -
+**Atributo** | Disponibilidad
+**Contexto** | Operaciones normales
+**Estímulo** | Fallo en envío de datos, falso positivo
+**Respuesta** | Detección de falso positivo por parte del sistema, comprobación con el usuario por vía de comunicación directa.
 
 :Escenario 1
 
-Decisiones arquitectónicas | Decisión | Sensibilidad | Equilibrio | Riesgos | No riesgos 
+Decisiones arquitectónicas | Sensibilidad | Equilibrio | Riesgos | No riesgos 
 ---------------------------|----------|--------------|------------|------|----
- decision | - | - | - | - | -
+ 1. Sensor de redundancia | PS1, PS2, PS3 | PE1 | R1, R3, R4, R5, R7 | -
+ 2. Detección de inconsistencias en el dispositivo móvil | PS4, PS3 | PE1 | R1, R3, R4, R7 | -
+ 3. Detección de inconsistencias en el servidor | PS3 | PE1 | R1, R2, R3, R4 | -
+ 4. Mantenibilidad activa, reducción de deuda técnica | PS5 | - | R1 | - 
 
 :Escenario 1 decisiones
 
 #### 4.1.1.1 Razonamiento
 
-Explicación
+Aunque se traten de priorizar la minimización de falsos negativos al falsos positivos, éstos últimos pueden llegar a suponer un coste importante. En el caso de que el sistema esté siempre disponible y se generen alertas de falsos positivos por los clientes puede llegar a sobrecargar la capacidad de acción originalmente planteada. Se proponen sensores de redundacia de información por la parte del usuario, detección en el dispositivo móvil y/o en el servidor. Asimismo en caso de poder llamar al usuario ante una detección de parámetros fuera de rango, se le podría llamar para comprobar que no fuese un falso positivo como última barrera.
+
+Es necesario también tener un plan de mantenimiento activo y continuo, donde recomendamos una estrategia DevOps de CI/CD que esté trabajando en mejoras y soluciones a errores del sistema. Facilita además el despliegue en intervalos de tiempo de caída muy breves o casi nulos, cumpliendo con el ASR de Dispoinibilidad.
 
 #### 4.1.1.2 Diagrama arquitectónico
 
+N/A
 
 ### 4.1.2 Escenario 2
 
- Escenario: 2 | Como cliente quiero que el sistema ...
+ **Escenario: 2** | Como cliente quiero que el sistema reconozca con una tolerancia del 96% y en menos de medio segundo quién soy utilizando mis datos biométricos.
 -------------|---------------------------------------
-Atributo | Nombre de atributo
-Contexto | -
-Estímulo | -
-Respuesta | -
+**Atributo** | Reconocimiento de patrones
+**Contexto** | Reconocimiento biométrico
+**Estímulo** | Toma mucho tiempo
+**Respuesta** | Repetir escaneo
 
 :Escenario 2
 
-Decisiones arquitectónicas | Decisión | Sensibilidad | Equilibrio | Riesgos | No riesgos 
+Decisiones arquitectónicas | Sensibilidad | Equilibrio | Riesgos | No riesgos 
 ---------------------------|----------|--------------|------------|------|----
- decision | - | - | - | - | -
+ Reducir la funcionalidad | PS3 | PE3 | R6, R4, R3, R2, R1 | -
+ Explotar la funcionalidad | PS3 | PE3 | R7, R4, R3, R2, R1 | -
+ Aumentar paralelismo | PS3, PS1 | R1, R2, R3, R7 | -
 
 :Escenario 2 decisiones
 
 #### 4.1.2.1 Razonamiento
 
-Explicación
+Como esta funcionalidad es un extra al sistema que no le impide realizar su función principal(entendida ésta como el sistema de notificaciones de emergencia). Consideramos que dado el riesgo que supone tratar estos datos, se proponen dos acercamientos. El primero sería reducir o eliminar esta funcionalidad, limitando por ejemplo, el tipo de usuarios que puede identificar a otros, como personal sanitario. O explotarla y aprovechar tanto procesamiento de datos para favorecer investigaciones e indicadores estadísticos sobre salud pública. En cualquier caso considerar PE3.
+
+Si se aumentan los recursos en este proceso de identificación, podría funcionar en un tiempo considerable. Como se comenta en PE3, es suficiente con un intervalo mucho mayor al planteado por el ASR.
 
 #### 4.1.2.2 Diagrama arquitectónico
 
+N/A
+
 ### 4.1.3 Escenario 3
 
- Escenario: 3 | Como cliente quiero que el sistema ...
+ **Escenario: 3** | Como cliente quiero poder notificar emergencias en menos de 5 segundos y citas en menos de 20 segundos.
 -------------|---------------------------------------
-Atributo | Nombre de atributo
-Contexto | -
-Estímulo | -
-Respuesta | -
+**Atributo** | Nombre de atributo
+**Contexto** | -
+**Estímulo** | -
+**Respuesta** | -
 
 :Escenario 3
 
@@ -560,7 +573,7 @@ Explicación
 
 #### 4.1.3.2 Diagrama arquitectónico
 
-### 4.1.3 Escenario 4
+### 4.1.4 Escenario 4
 
  Escenario: 4 | Como cliente quiero que el sistema ...
 -------------|---------------------------------------
@@ -582,6 +595,31 @@ Decisiones arquitectónicas | Decisión | Sensibilidad | Equilibrio | Riesgos | 
 Explicación
 
 #### 4.1.4.2 Diagrama arquitectónico
+
+
+### 4.1.5 Escenario 5
+
+ Escenario: 5 | Como cliente quiero que el sistema ...
+-------------|---------------------------------------
+Atributo | Nombre de atributo
+Contexto | -
+Estímulo | -
+Respuesta | -
+
+:Escenario 5
+
+Decisiones arquitectónicas | Decisión | Sensibilidad | Equilibrio | Riesgos | No riesgos 
+---------------------------|----------|--------------|------------|------|----
+ decision | - | - | - | - | -
+
+ :Escenario 5 decisiones
+
+#### 4.1.5.1 Razonamiento
+
+Explicación
+
+#### 4.1.5.2 Diagrama arquitectónico
+
 
 # 5. Fase 3:  Follow-up
 
