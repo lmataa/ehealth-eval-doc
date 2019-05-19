@@ -443,16 +443,16 @@ Se comentan dos atributos de calidad:
 
 Se definen los puntos de sensibilidad de un sistema, como los componentes críticos para el éxito (correcto funcionamiento) del mismo. De la evaluación de la arquitectura propuesta hemos identificado los siguientes:
 
-• PS1: Calibración del sensor de la pulsera: Es importante para el sistema que el sensor de la pulsera este correctamente calibrado y revisado periódicamente para asegurarnos que las mediciones son correctas, en caso contrario podremos tener 2 problemas de diferente gravedad, que serían:
+• **PS1**: Calibración del sensor de la pulsera: Es importante para el sistema que el sensor de la pulsera este correctamente calibrado y revisado periódicamente para asegurarnos que las mediciones son correctas, en caso contrario podremos tener 2 problemas de diferente gravedad, que serían:
 
 1.	El sensor mida erróneamente y genera un aviso de emergencia cuando el paciente está bien, generaría falsas alertas que no son necesarias, es problemático, pero no peligra la salud del paciente.
 2.	El sensor no mida una emergencia real por un problema de salud del paciente y no se genera la alerta, esto hace peligrar la salud del paciente.
 
-• PS2: Conectividad entre la pulsera y el teléfono móvil: Perder la conectividad entre el sensor de la pulsera y el teléfono móvil es crítico para el sistema. Sin esta conexión, el sistema no recibe las alertas de emergencia, aunque se estén produciendo.
+• **PS2**: Conectividad entre la pulsera y el teléfono móvil: Perder la conectividad entre el sensor de la pulsera y el teléfono móvil es crítico para el sistema. Sin esta conexión, el sistema no recibe las alertas de emergencia, aunque se estén produciendo.
 
-• PS3: Conectividad entre el teléfono móvil y el servidor: Perder la conectividad entre el teléfono móvil y el servidor es crítico para el sistema. Sin esta conexión, el sistema no recibe las alertas de emergencia, aunque se estén produciendo.
+• **PS3**: Conectividad entre el teléfono móvil y el servidor: Perder la conectividad entre el teléfono móvil y el servidor es crítico para el sistema. Sin esta conexión, el sistema no recibe las alertas de emergencia, aunque se estén produciendo.
 
-• PS4: Necesidad de batería de gran capacidad para asegurar durabilidad en la
+• **PS4**: Necesidad de batería de gran capacidad para asegurar durabilidad en la
 comunicación entre la pulsera y el teléfono móvil y entre el teléfono móvil y el servidor: Se necesitará la mayor autonomía posible en la batería de nuestros dispositivos, especialmente de la pulsera que mide las variables del paciente.
 
 
@@ -460,25 +460,27 @@ comunicación entre la pulsera y el teléfono móvil y entre el teléfono móvil
 
 Se definen los puntos de equilibrio de un sistema como una propiedad que afecta a más de un atributo de calidad o punto de sensibilidad. De la evaluación de la arquitectura propuesta, hemos identificado los siguientes:
 
-• PE1: Es preferible tener capacidad de procesamiento suficiente para poder procesar
-los datos de los sensores de forma concurrente en tiempo real, para no tener demoras
-en las alertas, sobre la capacidad de almacenamiento para no perder datos en el
-servidor. El principal objetivo del sistema es procesar los datos de los sensores de las pulseras para alertar al usuario. La capacidad de almacenar datos para no perder registros en el
-servidor es menos prioritaria que la mencionada, ya que aporta menor valor de
-negocio.
+• **PE1**: Es preferible tener capacidad de procesamiento suficiente para poder procesar los datos de los sensores de forma concurrente en tiempo real, para no tener demoras en las alertas. Sin embargo los tiempos mínimos originalmente pensados son suficientes para la demora que pueda sufrir en tecnología. Pensamos sin embargo que estos tiempos deberían ser menores aún, ya que se trata de un sistema crítico. El principal objetivo del sistema es procesar los datos de los sensores de las pulseras para alertar al usuario. La capacidad de almacenar datos para no perder registros en el servidor es menos prioritaria que la mencionada, ya que aporta menor valor de negocio.
 
-• PE2: Es preferible más duración de la batería de la pulsera antes que su tamaño o estética.
-La función principal de la pulsera es enviar las alertas de emergencia, necesitamos una autonomía mínima de 24 horas enviando los datos, pondremos este aspecto con mayor importancia que una estética o tamaño mas reducido para garantizar el buen funcionamiento del sistema.
+• **PE2**: Es preferible más duración de la batería de la pulsera antes que su tamaño o estética. La función principal de la pulsera es enviar las alertas de emergencia, necesitamos una autonomía mínima de 24 horas enviando los datos, pondremos este aspecto con mayor importancia que una estética o tamaño mas reducido para garantizar el buen funcionamiento del sistema.
 
+. **PE3**: Consideramos los sensores biométricos una funcionalidad con poco valor de negocio para el caso que se plantea. Complicando la implementación por regulaciones de datos personales así como por la necesidad de procesar datos con prioridad para la identificación de personas, lo cual es un riesgo potencial de uso malicioso. Sin embargo si los stakeholders insisten, la prioridad de las identificaciones biométricas podrían estar asignadas para ser procesada en último lugar a la hora de atender los eventos. Con esta transformación sería de utilidad para la población general y no solo pacientes con dispositivos IoT especiales ya que solo tienen que ser escaneados una vez. (Con un tiempo de retorno suficiente como para procesar una imagen del paciente, transportarlo a un hospital y recibir allí la respuesta en caso de emergencia).
 
 ## 3.8 Identificación de riesgos
 
 Se define riesgo como una decisión arquitectónica que puede generar consecuencias indeseables a la luz de los requisitos de los atributos de calidad. De la evaluación de la arquitectura propuesta, hemos identificado los siguientes:
 
-- R1: Descripción
-- R2: Descripción
+- **R1**: Inconsistencias en el sistema (o partes) crítico debidas a vulnerabilidades no probadas. Inevitable, para reducir la amenaza se puede priorizar la Testabilidad del sistema.
+- **R2**: El sistema considera la escalabilidad pero sólo con márgenes de usuarios y datos significativos. Se plantea una mantenibilidad activa pero no se prepara para integraciones de nuevas funcionalidades de forma continua. Establecer una estrategia DevOps en despliegue mitigaría este riesgo.
+- **R3**: Vunerabilidades en los sitemas de almacenamiento / envío de datos personales sensibles. En caso de haber una violación de la seguridad del sistema se accedería a información muy sensible lo cual puede suponer una amenaza al valor de negocio del sistema así como opinión pública, multa o cese de servicios, etc.
+- **R4**: Fallo de conexión: Ya sea al dispositivo IoT como al servidor. Ambos tienen como cuello de botella el dispositivo móvil del usuario lo cual depende exclusivamente de su estado y delegar este poder en el cliente es un riesgo que hay que asumir y contemplar. Si el dispositivo móvil de nuestro cliente no tiene especificaciones suficientes como para poder ejecutar todas las funciones del sistema correctamente pueden ocurrir fallos. Este riesgo se mitigaría limitando versiones en despliegue a ciertos modelos objetivo de la aplicación de usuario final. Se limita la portabilidad.
+- **R5**: Potencia de calibración del dispositivo IoT. Es conocido en el sector que estos dispositivos, de no ser especializados, procesan con bastante ruido variables biométricas generales. De usar un reloj inteligente como sensor crítico se asume que el cliente es responsable de ello, pero puede no ser consciente. Si se  da un fallo en este caso, el sistema perdería valor de negocio. Para mitigar este riesgo se propone especializar el sensor objetivo del sistema, sino general con un dispositivo en concreto. También se contempla la opción de crear un sistema software preciso que cumpla esta función.
+- **R6**: Oportunidad de análisis de datos y participación en investigaciones pertinentes así como financiaciones potenciales. De incluir una tercera capa al sistema se podría aumentar considerablemente el valor de negocio del sistema. Pudiendo analizar datos y asignar correlaciones y estimaciones en temas de salud pública e investigación. Incluir un análisis de este tipo llamaría la atención de posibles contribuidores al proyecto sin mucho coste adicional.
+- **R7**: Fallo permanente en hardware de usuario. Puede no dectectarse un paro de emisiones de un usuario como un fallo hardware sino como una emergencia sanitaria y malgastar recursos por una avería técnica. El riesgo no le impide al sistema realizar su función principal con otros terminales pero pierde recursos en este caso.
 
-¿Posible métrica de coste de los riesgos?
+A cada riesgo y oportunidad identificada le hemos asignado un valor de negocio, un valor de riesgo y una cantidad de impacto. Representado en el siguiente diagrama de burbujas.
+
+![Diagrama Riesgo/Valor: El tamaño de las burbujas es el impacto en el negocio](capturas/risk_value.png)
 
 # 4. Fase 2: Evaluación completa
 
