@@ -112,7 +112,7 @@ A continuación en presenta un calendario de reuniones propuestas.
 Semana | Fase ATAM / Objetivos reunión | Reunión equipo evaluado 
 -------|-------------------------------|------------------------
 1/05 | Fase 0: preparación | N/A
-6/05 | Fase 1: Presentación de ATAM | 9/05/2019, Acta 1
+6/05 | Fase 1: Presentación de ATAM | 9/05/2019, Acta 1, NDA
 6/05 | Fase 1: Business drivers, presentación de la arquitectura | 10/05/2019, Acta 2
 13/05 | Fase 1: Identificación de enfoques arquitectónicos, árbol de utilidad | N/A
 13/05 | Fase 1: Generación del árbol de atributos de calidad | 13/05/19, Acta 3
@@ -782,3 +782,90 @@ Questioner 2 | Carlos Gómez Robles
 
 # 8. Anexo 2: NDA
 
+## Acuerdo de confidencialidad
+
+### Contrato de confidencialidad
+
+Este documento puede ser utilizado tanto si las empresas o personas firmantes van a compartir mutuamente información confidencial (acuerdo bilateral) como cuando únicamente una de ellas va a compartir información confidencial (acuerdo unilateral), por lo que solo la otra parte adquiere la obligación de guardar en secreto dicha información.
+
+
+#### Contenido
+
+**De una parte:** el grupo de arquitectura y en su nombre y representación (con poder suficiente para ello) D/Dña , en calidad de lider del proyecto.
+
+**De otra parte:** el grupo ATAM y en su nombre y representación (con poder suficiente para ello) D/Dña Luis Mata Aguilar, en calidad de líder del equipo ATAM.
+
+Reunidos en **Madrid**, a **6** de **mayo** de **2019**
+
+#### Exponen
+
+- I. Que las partes, anteriormente citadas, están interesadas en el desarrollo del presente contrato, para lo cual, aceptaron celebrar el presente Acuerdo de Confidencialidad con el fin de establecer el procedimiento que regirá la custodia y no transmisión a terceros de la información distribuida entre las partes, así como los derechos, responsabilidades y obligaciones inherentes en calidad de remitente, Propietario y «Destinatario» de la referida información.
+- II. Que las partes, en virtud de lo anteriormente expuesto, convinieron que el presente Acuerdo de Confidencialidad se rija por la normativa aplicable al efecto y, en especial por las siguientes cláusulas.
+
+#### Cláusulas
+
+##### PRIMERA - Definiciones
+
+A los efectos del presente Acuerdo, los siguientes términos serán interpretados de acuerdo con las definiciones anexas a los mismos. Entendiéndose por: 
+
+- «Información propia»: tendrá tal consideración y a título meramente enunciativo y no limitativo, lo siguiente: descubrimientos, conceptos, ideas, conocimientos, técnicas, diseños, dibujos, borradores, diagramas, textos, modelos, muestras, bases de datos de cualquier tipo, aplicaciones, programas, marcas, logotipos, así como cualquier información de tipo técnico, industrial, financiero, publicitario, de carácter personal o comercial de cualquiera de las partes, esté o no incluida en la solicitud de oferta presentada, independientemente de su formato de presentación o distribución, y aceptada por los «Destinatarios».
+- «Fuente»: tendrá la consideración de tal, cualquiera de las partes cuando, dentro de los términos del presente Acuerdo, sea ella la que suministre la Información Propia y/o cualquiera de los implicados (accionistas, directores, empleados, …) de la empresa o la organización.
+- «Destinatarios»: tendrán la consideración de tales cualquiera de las partes cuando, dentro de los términos del presente Acuerdo, sea ellos quienes reciban la Información Propia de la otra parte.
+
+##### SEGUNDA.- Información Propia.
+
+Las partes acuerdan que cualquier información relativa a sus aspectos financieros, comerciales, técnicos, y/o industriales suministrada a la otra parte como consecuencia de la solicitud de Oferta para el desarrollo del presente proyecto objeto del contrato, o en su caso, de los acuerdos a los que se lleguen (con independencia de que tal transmisión sea oral, escrita, en soporte magnético o en cualquier otro mecanismo informático, gráfico, o de la naturaleza que sea) tendrá consideración de información confidencial y será tratada de acuerdo con lo establecido en el presente documento. Esa información, y sus copias y/o reproducciones tendrán la consideración de «Información propia» los efectos del presente acuerdo.
+
+##### TERCERA.- Exclusión del Presente Acuerdo.
+
+No se entenderá por «Información propia», ni recibirá tal tratamiento aquella información que:
+- I. Sea de conocimiento público en el momento de su notificación al «Destinatario» o después de producida la notificación alcance tal condición de pública, sin que para ello el «Destinatario» violentara lo establecido en el presente acuerdo, es decir, no fuera el «Destinatario» la causa o «Fuente» última de la divulgación de dicha información.
+- II. Pueda ser probado por el «Destinatario», de acuerdo con sus archivos, debidamente comprobados por la «Fuente», que estaba en posesión de la misma por medios legítimos sin que estuviese vigente en ese momento algún y anterior acuerdo de confidencialidad al suministro de dicha información por su legítimo creador.
+
+##### CUARTA.- Custodia y no divulgación.
+
+Las partes consideran confidencial la «Información propia» de la otra parte que le pudiera suministrar y acuerdan su guarda y custodia estricta, así como a su no divulgación o suministro, ni en todo ni en parte, a cualquier tercero sin el previo, expreso y escrito consentimiento de «Fuente». Tal consentimiento no será necesario cuando la obligación de suministrar o divulgar la «Información propia» de la «Fuente» por parte del «Destinatario» venga impuesta por Ley en vigor o Sentencia Judicial Firme. 
+
+Este Acuerdo no autoriza a ninguna de las partes a solicitar o exigir de la otra parte el suministro de información, y cualquier obtención de información de/o sobre la «Fuente» por parte del «Destinatario» será recibida por éste con el previo consentimiento de la misma.
+
+##### QUINTA.- Soporte de la «Información propia».
+
+Toda o parte de la «Información propia», papeles, libros, cuentas, grabaciones, listas de clientes y/o socios, programas de ordenador, procedimientos, documentos de todo tipo o tecnología en el que el suministro fuese hecho bajo la condición de «Información propia», con independencia del soporte que la contuviera, tendrá la clasificación de secreta, confidencial o restringida
+
+##### SEXTA.- Responsabilidad en la Custodia de la «Información propia».
+
+La «Información propia» podrá ser dada a conocer por el «Destinatario» o sus directivos y/o sus empleados, sin perjuicio de que el «Destinatario» tome cuentas medidas sean necesarias para el exacto y fiel cumplimento del presente Acuerdo, debiendo necesariamente informar a unos y otros del carácter secreto, confidencial, o restringido de la información que da a conocer, así como da existencia del presente Acuerdo.
+
+Así mismo, el «Destinatario» deberá dar a sus directivos y/o sus empleados, las directrices e instrucciones que considere oportunas y convenientes a los efectos de mantener el secreto, confidencial, o restringido de la información propia de la «Fuente». El «Destinatario» deberá advertir a todos sus directivos, empleados, etc., que de acuerdo con lo dispuesto en este acuerdo tengan acceso a la «Información propia», de las consecuencias y responsabilidades en las que el «Destinatario» puede incurrir por la infracción por parte de dichas personas, de lo dispuesto en este Acuerdo.
+
+Sin perjuicio de lo anterior, la «Fuente» podrá pedir y recabar del «Destinatario», como condición previa al suministro de la «Información propia», una lista de los directivos yempleados que tendrán acceso a dicha información, lista que podrá ser restringida o reducida
+por la «Fuente».
+
+Esta lista será firmada por cada uno de los directivos y empleados que figuren en ella, manifestando expresamente que conocen la existencia del presente Acuerdo y que actuarán de conformidad con lo previsto en él. Cualquier modificación de la lista de directivos y/o empleados a la que se hizo referencia anteriormente será comunicada de forma inmediata a la «Fuente», por escrito conteniendo los extremos indicados con anterioridad en este párrafo.
+
+Sin perjuicio de lo previsto en los párrafos anteriores, cada parte será responsable tanto de la conducta dos sus directivos y/o empleados como de las consecuencias que de ella se pudieran derivarse de conformidad con lo previsto en el presente Acuerdo.
+
+##### SÉPTIMA.- Responsabilidad en la custodia de la «Información propia».
+
+El «Destinatario» será responsable de la custodia de la «Información propia» y cuantas copias pudiera tener de la misma suministrada por la «Fuente», en orden a su tratamiento, como secreta, confidencial o restringida, en el momento presente y futuro, salvo indicación explicita de la «Fuente».
+
+Al objeto de garantizar esta custodia, se deberá devolver la «Información propia» y cuantas copias pudiera tener de la misma suministrada por la «Fuente», a la terminación de las relaciones comerciales, o antes, si fuera requerido por la «Fuente» y respondiendo a los daños y perjuicios correspondientes, en el caso de incumplimiento de lo aquí dispuesto. (En aquellos casos en los que no fuera necesaria la devolución de la «Información propia» deberá eliminarse este párrafo).
+
+##### OCTAVA.- Incumplimiento.
+
+El incumplimiento de las obligaciones de confidencialidad plasmadas en este documento, por cualquiera de las partes, sus empleados o directivos, facultará a la otra a reclamar por la vía legal que estime más procedente, a la indemnización de los daños y perjuicios ocasionados, incluido el lucro cesante.
+
+##### NOVENA.- Duración del Acuerdo de Confidencialidad.
+
+Ambas partes acuerdan mantener el presente Acuerdo de Confidencialidad, aún después de terminar sus relaciones comerciales.
+
+##### DECIMA.- Legislación Aplicable
+
+El presente Acuerdo de Confidencialidad se regirá por la Legislación Española, y cualquier disputa, controversia o conflicto en cuanto a la interpretación o ejecución del presente Acuerdo será sometido a la jurisdicción de los Tribunales de Madrid, con exclusión de cualquier otro que pudiera corresponder a las partes, al que en este momento renuncian.
+
+Y en prueba de esta conformidad, las partes firman o presente acuerdo, por duplicado y a un solo efecto, en el lugar y fecha ut supra.
+
+Entidad | DNI representante | Firma representante
+--------|-------------------|--------------------
+Grupo Arquitectura | - | -
+Grupo ATAM | - | -
