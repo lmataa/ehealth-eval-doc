@@ -315,11 +315,6 @@ Así mismo, del análisis de los Business Goals, echamos en falta algún Busines
 
 Grupos de prioridad identificados por el equipo de proyecto y nuestra reflexión al respecto.
 
-
-
-
-
-
 Stakeholders, hace referencia a cualquier persona o grupo de ellas que se vean afectados o afectan a las actividades del proyecto, ya sea de forma positiva o negativa, deben ser considerados como un elemento esencial en la planificación estratégica del mismo. 
 En el documento de arquitectura se deben considerar aquellas personas o conjuntos de personas que pueden influir en el diseño de la arquitectura, en base a sus necesidades y peticiones.
 El equipo de proyecto ha considerado los siguientes stakeholders:
@@ -327,13 +322,20 @@ El equipo de proyecto ha considerado los siguientes stakeholders:
 ![Stakeholder Table](/capturas/stakeholderTable.png)
  
 El equipo de evaluación considera las siguientes aportaciones: 
+
 •	Organizaciones sanitarias públicas y privadas: Son consideradas como los clientes del proyecto. Su prioridad es alta ya que sus intereses abarcan : costo, calidad, vida del proyecto y la posibilidad de hacer cambios. 
+
 •	Fabricantes de dispositivos de monitorización: Considerados como prioridad el grupo a evaluar justifica correctamente porqué se corresponden con una prioridad alta. Pero nos gustaría además incluir otros aspectos importantes que afectan al desarrollo y planificación del proyecto:  ganancia y amortización de los costos, adherencia a los procesos internos, calidad, reusabilidad de los dispositivos.
+
 •	Usuarios: Nuestro equipo de corrección discrepa en cuánto a la prioridad de este conjunto, y los pone con prioridad alta, justificando que los intereses de este grupo son de grandes intereses a la hora de desarrollar la planificación y arquitectura. Dentro de estos intereses incluimos: Facilidades de uso del sistema, seguridad, Personalización, configuración, etc. Nos gustaría además resaltar que no se  especifica quienes son los usuarios, si son los pacientes generales o los de especial seguimiento. Sería necesario diferencias a estos dos tipos de pacientes. 
 Además de los ya descritos nos gustaría incluir: 
+
 •	Grupo de desarrolladores: Estos tienen que conocer la arquitectura que se va a implementar junto con los estándares de desarrollo y componentes reusables. Además de la necesidad de añadir facilidades para hacer cambios.
+
 •	Administradores del Sistema: Con los diferentes intereses, simple configuración, monitoreo o administración de los servicios, disponibilidad y escalabilidad. 
+
 •	Arquitecto Software: Tendrá que entender las restricciones reales del sistema y manejar las expectativas de todos los stakeholders.
+
 •	Jefe del Proyecto
 
 
