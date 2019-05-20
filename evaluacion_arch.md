@@ -324,7 +324,7 @@ Stakeholders, hace referencia a cualquier persona o grupo de ellas que se vean a
 En el documento de arquitectura se deben considerar aquellas personas o conjuntos de personas que pueden influir en el diseño de la arquitectura, en base a sus necesidades y peticiones.
 El equipo de proyecto ha considerado los siguientes stakeholders:
 
-!Stakeholder Table](/capturas/stakeholderTable.png)
+![Stakeholder Table](/capturas/stakeholderTable.png)
  
 El equipo de evaluación considera las siguientes aportaciones: 
 •	Organizaciones sanitarias públicas y privadas: Son consideradas como los clientes del proyecto. Su prioridad es alta ya que sus intereses abarcan : costo, calidad, vida del proyecto y la posibilidad de hacer cambios. 
