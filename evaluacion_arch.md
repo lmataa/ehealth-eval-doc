@@ -328,6 +328,8 @@ El equipo de evaluación considera las siguientes aportaciones:
 •	Fabricantes de dispositivos de monitorización: Considerados como prioridad el grupo a evaluar justifica correctamente porqué se corresponden con una prioridad alta. Pero nos gustaría además incluir otros aspectos importantes que afectan al desarrollo y planificación del proyecto:  ganancia y amortización de los costos, adherencia a los procesos internos, calidad, reusabilidad de los dispositivos.
 
 •	Usuarios: Nuestro equipo de corrección discrepa en cuánto a la prioridad de este conjunto, y los pone con prioridad alta, justificando que los intereses de este grupo son de grandes intereses a la hora de desarrollar la planificación y arquitectura. Dentro de estos intereses incluimos: Facilidades de uso del sistema, seguridad, Personalización, configuración, etc. Nos gustaría además resaltar que no se  especifica quienes son los usuarios, si son los pacientes generales o los de especial seguimiento. Sería necesario diferencias a estos dos tipos de pacientes. 
+
+
 Además de los ya descritos nos gustaría incluir: 
 
 •	Grupo de desarrolladores: Estos tienen que conocer la arquitectura que se va a implementar junto con los estándares de desarrollo y componentes reusables. Además de la necesidad de añadir facilidades para hacer cambios.
