@@ -595,22 +595,22 @@ N/A
 
  **Escenario: 3** | Como cliente quiero poder notificar emergencias en menos de 5 segundos y citas en menos de 20 segundos.
 -------------|---------------------------------------
-**Atributo** | Nombre de atributo
-**Contexto** | -
-**Estímulo** | -
-**Respuesta** | -
+**Atributo** | Rendimiento
+**Contexto** | Operaciones normales
+**Estímulo** | Falla un procesador
+**Respuesta** | Aumento significativo del tiempo de respuesta del sistema
 
 :Escenario 3
 
 Decisiones arquitectónicas | Sensibilidad | Equilibrio | Riesgos | No riesgos 
 ---------------------------|----------|--------------|------------|------|----
- decision | - | - | - | - 
+ CPU de apoyo | PS3 | - | - | - 
 
 :Escenario 3 decisiones
 
 #### 4.1.3.1 Razonamiento
 
-Explicación
+A esta funcionalidad se la considerará una parte crítica del sistema, ya que la notificación de emergencias es una de las partes más importantes y significativas del software. El fallo del procesador puede concurrir en la pérdida de notificaciones por parte de los usuarios, por lo que se hace muy necesario un plan alternativo si el procesador fallase. Para solucionar este problema se propone la implantación de CPU's de apoyo para evitar la pérdida de datos y el retardo en el procesamiento de notificaciones.
 
 #### 4.1.3.2 Diagrama arquitectónico
 
