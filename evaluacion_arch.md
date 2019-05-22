@@ -690,6 +690,34 @@ Una parte fundamental del sistema es la ley de protección de datos. Por eso mis
 
 #### 4.1.6.2 Diagrama arquitectónico
 
+N/A
+
+### 4.1.7 Escenario 7
+
+ **Escenario: 7** | :Como cliente quiero que el sistema sea escalable horizontalmente para no experimetar pérdidas de rendimiento con la popularización del uso en incrementos contemplados del 30% de usuarios, en un tiempo de 5 días/persona. 
+
+-------------|---------------------------------------
+Atributo | Escalabilidad
+Contexto | Gestión de Sistemas
+Estímulo | Estancamiento del número de usuarios
+Respuesta | Crecida innecesaria de la escalabilidad
+
+:Escenario 7
+
+Decisiones arquitectónicas | Sensibilidad | Equilibrio | Riesgos | No riesgos 
+---------------------------|----------|--------------|------------|------|----
+ Estudio periódico de uso | PS5 | - | R2 | -
+
+ :Escenario 6 decisiones
+
+#### 4.1.7.1 Razonamiento
+
+Estimar el crecimiento del número de usuarios en una cifra concreta puede llevar a dos problemas: el primero es que el número de usuarios crezca de forma más rápida que lo estimado, de forma que se experimentarán las pérdidas de rendimiento que se quieren evitar. El segundo posible problema es que el número de usuarios no crezca tan rápido como se estima, reduciéndose cada vez más el porcentaje de incremento de usuarios en el sistema, lo que provocaría una escalabilidad innecesaria y por tanto un coste en vano para el cliente. Estos problemas pueden ser evitados con un seguimiento periódico del crecimiento del uso del sistema y un plan de escalabilidad conforme a este.
+
+#### 4.1.7.2 Diagrama arquitectónico
+
+N/A
+
 # 5. Fase 3:  Follow-up
 
 La fase 3 se corresponde con el seguimiento, donde el equipo de evaluación produce y entrega un informe con los resultados finales de la evaluación. En primer lugar se distribuye a las partes interesadas fundamentales para asegurarse de que no contiene errores de comprensión, y una vez completada esta revisión se entrega a la persona encargada de la evaluación.
