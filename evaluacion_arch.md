@@ -604,7 +604,7 @@ N/A
 
 Decisiones arquitectónicas | Sensibilidad | Equilibrio | Riesgos | No riesgos 
 ---------------------------|----------|--------------|------------|------|----
- CPU de apoyo | PS3 | - | - | - 
+ CPU de apoyo | PS2,PS3 | - | - | - 
 
 :Escenario 3 decisiones
 
@@ -614,52 +614,57 @@ A esta funcionalidad se la considerará una parte crítica del sistema, ya que l
 
 #### 4.1.3.2 Diagrama arquitectónico
 
+N/A
+
 ### 4.1.4 Escenario 4
 
- **Escenario: 4** | Como cliente quiero que el sistema ...
+ **Escenario: 4** | Como cliente quiero que la información del sensor sea procesada por el sistema en menos de 2 segundos.
 -------------|---------------------------------------
-**Atributo** | Nombre de atributo
-**Contexto** | -
-**Estímulo** | -
-**Respuesta** | -
+**Atributo** | Utilizacion de recursos
+**Contexto** | Operaciones normales
+**Estímulo** | Falla un procesador
+**Respuesta** | Disponer de un procesador alternativo
 
 :Escenario 4
 
 Decisiones arquitectónicas | Sensibilidad | Equilibrio | Riesgos | No riesgos 
 ---------------------------|----------|--------------|------------|------|----
- decision | - | - | - | - 
+ Pocesador alternativo | PS2,PS3 | PE1 | R4 | - 
 
  :Escenario 4 decisiones
 
 #### 4.1.4.1 Razonamiento
 
-Explicación
+En caso de que el procesador fallara, sería necesario disponer de un plan alternativo debido a la criticidad de esta parte del sistema. Lo que se persigue es que el sistema siga procesando los datos del sensor ante algún fallo de algún componente físico del procesador para evitar la pérdida de datos. Dispondremos de un procesador auxiliar que se utilizará en caso de que el sensor no recoja datos en un periodo de 1s para así asegurar un escenario de tiempo real.
 
 #### 4.1.4.2 Diagrama arquitectónico
 
+N/A
 
 ### 4.1.5 Escenario 5
 
- **Escenario: 5** | Como cliente quiero que el sistema ...
+ **Escenario: 5** | Como cliente quiero que mis datos personales estén protegidos y estén correspondidos con la realidad captada.
 -------------|---------------------------------------
-Atributo | Nombre de atributo
-Contexto | -
-Estímulo | -
-Respuesta | -
+Atributo | Integridad
+Contexto | Operaciones normales
+Estímulo | Acceso a datos personales por personas no autorizadas
+Respuesta | Utilización de datos biométricos
 
 :Escenario 5
 
 Decisiones arquitectónicas | Sensibilidad | Equilibrio | Riesgos | No riesgos 
 ---------------------------|----------|--------------|------------|------|----
- decision | - | - | - | -
+ Utilizacion datos biometricos | - | - | R3 | -
 
  :Escenario 5 decisiones
 
 #### 4.1.5.1 Razonamiento
 
-Explicación
+La seguridad de los datos es algo fundamental en el sistema debiendo garantizar la imposibilidad de acceder a dichos datos a personas no autorizadas. Además de que los usuarios tengan que autenticarse con un nombre y una contraseña, cada vez que vayan a realizar alguna operación en la que se involucre sus datos personales, será necesario el reconocimiento de los datos biométricos del interesado.
 
 #### 4.1.5.2 Diagrama arquitectónico
+
+N/A
 
 ### 4.1.6 Escenario 6
 
