@@ -663,24 +663,25 @@ Explicación
 
 ### 4.1.6 Escenario 6
 
- **Escenario: 6** | Como cliente quiero que el sistema ...
+ **Escenario: 6** | :Como cliente quiero ejercer mi derecho de privacidad y proteger así mis datos personales. 
+
 -------------|---------------------------------------
-Atributo | Nombre de atributo
-Contexto | -
-Estímulo | -
-Respuesta | -
+Atributo | Seguridad
+Contexto | Gestión de Sistemas
+Estímulo | Vulneración de los datos personales
+Respuesta | Infracción de la LOPD
 
 :Escenario 6
 
 Decisiones arquitectónicas | Sensibilidad | Equilibrio | Riesgos | No riesgos 
 ---------------------------|----------|--------------|------------|------|----
- decision | - | - | - | -
+ Reforzar seguridad del sistema | - | - | R1, R3 | -
 
  :Escenario 6 decisiones
 
 #### 4.1.6.1 Razonamiento
 
-Explicación
+Una parte fundamental del sistema es la ley de protección de datos. Por eso mismo es vital controlar el la seguridad de nuestro sistema con servidores dedicados que cuenten con medidas de seguridad que blinden la información como prioridad para protegerse de cualquier ataque informático. Así, la empresa podrá conocer mejor sus datos, crear un Plan Director de Seguridad y aumentar la vigilancia. Todo esto supondrá un coste necesario si se requiere mayor seguridad.
 
 #### 4.1.6.2 Diagrama arquitectónico
 
