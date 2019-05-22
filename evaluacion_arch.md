@@ -595,7 +595,7 @@ N/A
 
  **Escenario: 3** | Como cliente quiero poder notificar emergencias en menos de 5 segundos y citas en menos de 20 segundos.
 -------------|---------------------------------------
-**Atributo** | Rendimiento
+**Atributo** | Time behaviour
 **Contexto** | Operaciones normales
 **Estímulo** | Falla un procesador
 **Respuesta** | Aumento significativo del tiempo de respuesta del sistema
