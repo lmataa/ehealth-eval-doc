@@ -849,18 +849,19 @@ Questioner 2 | Alejandro de la Fuente Perdiguero
 
 ### 7.1.2 Introducción
 
-ATAM (“Architecture tradeoff analysis method”) es un proceso de mitigación de riesgos en una fase temprana del ciclo de vida de desarrollo del software. Está diseñado de forma que los evaluadores no necesitan estar familiarizados con la arquitectura o sus objetivos de negocio, el sistema no necesita estar ya construido y puede haber un gran número de “stakeholders”. 
+La Arquitectura Tradeoff Método de Análisis (ATAM), es una metodología utilizada para las evaluaciones de Arquitecturas del Software que principalmente evalúa la adecuación de la Arquitectura de Software definida con respecto a los atributos de calidad especificados para el sistema. Obtiene   su   nombre del concepto de que a veces no será   posible cumplir con todos los atributos de calidad definidos y se deberán realizar concesiones mutuas (o tradeoffs) entre estos, para obtener el balance adecuado. 
 
-El proceso ATAM consiste en recoger información de los stakeholders sobre los Bussines Drivers (funcionalidad del sistema, objetivos, restricciones, etc.) para extraer los atributos de calidad y usar esta información para analizar las decisiones arquitectónicas sobre el sistema, valorando puntos sensibles y riesgos. El análisis se hace desde lo más general a lo más específico, hasta que la arquitectura ha sido revisada al detalle y los riesgos son identificados.
+En el marco de ATAM se toma como definición de arquitectura la que establece que la Arquitectura del Software de un programa o sistema de computación es la estructura o estructuras del sistema que contienen componentes Software, las propiedades externamente visibles de dichos componentes y las relaciones entre ellos. La Arquitectura de Software condiciona las características de un producto final en cuanto a atributos de calidad como la mantenibilidad y la productividad, por lo que resulta importante poder evaluar el cumplimiento de estos en forma temprana para corregir errores antes de pasar a la codificación del sistema, donde es más costoso. 
+
 
 
 ### 7.1.3 Objetivos
 
-En esta primera sesión se persigue formalizar el inicio del proceso de revisión ATAM, mediante la entrega de la documentación existente al equipo de evaluadores y la firma del contrato de confidencialidad que regirá dicho proceso.
+En esta primera sesión se formaliza el proceso de ATAM, mediante, lo primero, la firma del contrato de confidencialidad que regirá dicho proceso y se presentarán las diferentes fases de las que consta, y después el equipo a evaluar entregará la documentación existente al equipo de evaluadores.
 
 ### 7.1.4 Acuerdos
 
-Se ha acordado una segunda reunión para el día siguiente, 10 de mayo del 2019, en la que el equipo de arquitectura responsable del sistema hará una presentación al equipo de evaluación y el equipo de evaluación pedirá la información adicional que considere necesaria tras una primera aproximación a la arquitectura del sistema.
+Se ha acordado una segunda reunión para el día siguiente, 10 de mayo del 2019, en la que el equipo de arquitectura responsable del sistema presentará al equipo de evaluación. Se analizarán los stakeholders y se pedirá la documentación extra necesaria por parte del equipo evaluador para desempeñar correctamente sus funciones. El equipo evaluado firma el NDA.
 
 ## 7.2 ACTA 2
 
@@ -898,19 +899,20 @@ Questioner 2 | María Gallego Martín
 
 ### 7.2.3 Objetivos
 
-En esta segunda reunión, el equipo de arquitectura responsable del sistema hará una presentación al equipo de evaluación y el equipo de evaluación pedirá la información adicional que considere necesaria tras una primera aproximación a la arquitectura del sistema. Siguiendo la estructura del proceso ATAM visto en clase, esta sesión se corresponderá con el paso dos de la primera fase: presentación de los Business drivers.
+En esta segunda reunión, el equipo a evaluar hará una presentación tanto de su arquitectura como de las pautas de negocio, se pedirá por parte del equipo evaluador cualquier información adicional que se considere necesaria para realizar la evaluación lo más concreta posible. Se confirmarán si existen nuevos escenarios a describir, se priorizarán los stakeholders identificados en el proyecto y se compararán con el árbol de utilidad. Se presentarán los Bussines Drivers.
+
 
 ### 7.2.4 Acuerdos
 
-Se ha llevado a cabo una presentación del problema y de los Business Goals y de los Business drivers del sistema, describiendo:
+Se ha llevado a cabo una presentación del problema y de los Business Goals y de los Business drivers del sistema propuestos por el equipo corrector que se detallarán en la siguiente reunión, describiendo:
 
 - Las funciones más importantes del sistema
 - Las restricciones relevantes para el sistema
 - Los Business Goals y su contexto en relación con el problema
 - Los stakeholders y su importancia en el proyecto
 - Los atributos importantes para la arquitectura del sistema (ASR, Architecture Significant Requirements)
-- Se acuerda la última reunión para el día 13 de mayo de 2019.
 
+Se acuerda la última reunión para el día 13 de mayo de 2019.
 
 ## 7.3 ACTA 3
 
@@ -948,7 +950,7 @@ Questioner 2 | Carlos Gómez Robles
 
 ### 7.3.3 Objetivos
 
-En esta tercera reunión, el equipo de evaluación se ha reunido con el equipo responsable de la arquitectura del sistema para identificar y modificar los Business Goals, con el objetivo de alcanzar un consenso para partir de una base estable y desarrollar el resto de la evaluación a partir de dicha base.
+En esta última reunión, el equipo de evaluación se ha reunido con el equipo responsable de la arquitectura del sistema para identificar y modificar los Business Goals, con el objetivo de alcanzar un consenso para partir de una base estable y terminar el resto de la evaluación a partir de dicha base.
 
 Con anterioridad a esta reunión, el equipo de evaluación había analizado los Business Goals y los Business drivers (a partir de ahora BG y BD, respectivamente) de la arquitectura descritos en la documentación proporcionada. El motivo de esta reunión es obtener un acuerdo sobre los BG y los BD para poder desarrollar una correcta evaluación del sistema. Si no se obtuviera dicho acuerdo, tendríamos que podríamos evaluar la arquitectura partiendo de una base no óptima, de lo que derivaría una calidad cuestionable del resultado final. Por poner un ejemplo, la priorización de los atributos de calidad depende en gran medida de los BG.
 
@@ -967,6 +969,42 @@ En esta sección se presenta una lista de los acuerdos alcanzados y la problemá
 - El BD3, suponemos que hace referencia al BG2, además, consideramos según esta formulado en el documento que pertenece a un procedimiento. Junto con el BD4 (que consideramos el grupo de evaluación el verdadero BD del BG2) se reformulan conjuntamente, para mantener su coherencia con el BG2, y se añaden datos de verificación para hacer posible el futuro mantenimiento de los dispositivos. 
 Se añaden los BG y BD que faltan para una completa descripción del sistema. 
 
+
+  
+\  
+\  
+\  
+\
+
+  
+\  
+\  
+\  
+\
+
+  
+\  
+\  
+\  
+\
+
+  
+\  
+\  
+\  
+\
+
+  
+\  
+\  
+\  
+\
+
+  
+\  
+\  
+\  
+\
 
 # 8. Anexo 2: NDA
 
