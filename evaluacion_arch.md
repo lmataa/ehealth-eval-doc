@@ -13,12 +13,34 @@ lot: "true"
 lot-own-page: "true"
 listings-no-page-break: "true"
 ...
+  
+---
 
 # 1. Introducción
-> Posible cita aquí
+
+> “We are at the very beginning of time for the human race. It is not unreasonable that we grapple with problems. But there are tens of thousands of years in the future. Our responsibility is to do what we can, learn what we can, improve the solutions, and pass them on.” ― Richard P. Feynman 
 
 
+En ingeniería de software, un proceso de desarrollo de software es el proceso de dividir el trabajo de desarrollo de software en distintas fases para mejorar el diseño, la gestión de productos y la gestión de proyectos. También es conocido como un ciclo de vida de desarrollo de software. La metodología puede incluir la definición previa de entregables específicos y artefactos que son creados y completados por un equipo de proyecto para desarrollar o mantener una aplicación.
 
+En ingeniería de software, el método de análisis de compensación de arquitectura (ATAM) es un proceso de mitigación de riesgos que se utiliza al principio del ciclo de vida del desarrollo de software. El proceso ATAM es más beneficioso cuanto más temprano se realice en el ciclo de vida del desarrollo de software, cuando el costo de cambiar las arquitecturas es mínimo.
+
+ATAM fue desarrollado por el Instituto de Ingeniería de Software en la Universidad Carnegie Mellon. Su propósito es ayudar a elegir una arquitectura adecuada para un sistema de software mediante el descubrimiento de compensaciones y puntos de sensibilidad.
+
+En este documento de pretensión académica, tomaremos el rol de equipo de evaluación ATAM o equipo ATAM. Pasaremos por las secciones sucesvias trantando cada parte de este proceso y documentando cada decisión tomada para con la arquitectura a evaluar.
+
+Este proceso consta de las siguientes fases:
+
+ - Fase 0: preparación. 
+ - Fase 1: evaluación.
+ - Fase 2: evaluación, segunda parte.
+ - Fase 3: seguimiento.
+
+Asimismo este proceso consta de tres grupos de intersados principalmente:
+
+- Equipo de evaluación, externo al proyecto, evaluadores de la arquitectura.
+- Equipo responsable de la toma de decisiones del proyecto (*Project decision makes*), son las personas partícipes en el desarrollo de la arquitectura original y su documentación. El equipo a evaluar.
+- Los stakeholders de la arquitectura (*architecture stakeholders*), personas que pueden articular atributos de calidad específicos que la arquitectura debe cumplir.
 
 ## 1.1 Propósito del documento
 
@@ -32,7 +54,6 @@ Documento realizado por:
 - Alejandro de la Fuente Perdiguero
  
 El propósito de este documento es evaluar la arquitetura software recogida en el documento "a_evaluar.pdf" del repositorio de GitHub [lmataa/ehealth-eval-doc](https://github.com/lmataa/ehealth-eval-doc). El cual corresponde al resultado de la primera práctica de la asignatura de Arquitectura y Diseño SW del grupo GIWM31 redactado por:
-  
 
 - Pérez Souza, Miguel Ángel
 - Romero Andrés, Eric
@@ -53,20 +74,23 @@ En esta sección se incluye:
 
 ### 1.2.1 Definiciones
 
-- **Atributos de calidad**: 
-- **Business Goals**:
-- **Business Drivers**:
-- **ATAM**: 
-- **Riesgo**:  
-- **No riesgo**: 
-
+- **Atributos de calidad**: cualidad deseable del sistema, que puede manifestarse en forma de requisito no funcional, medible, testeable y evaluable. 
+- **Riesgo**: decisión arquitectónica que puede generar consecuencias indeseables para con los requisitos de atributos de calidad.
+- **No riesgo**: decisión arquitectónica que tras análisis se considera segura.
+- **Stakeholder**: cualquier persona, organización, sistema o empresa que tiene interés en el proyecto que se describe.
+- **Puntos de sensibilidad**: propiedad de un componente fundamental para el éxito del sistema. El sistema es sensible a este punto para su correcto funcionamiento.
+- **Puntos de equilibrio**: propiedad que afecta a mas de un atributo o punto de sensibilidad. El sistema requiere de un equilibro en este punto.
 
 ### 1.2.2 Acrónimos y Abreviaturas
 
 - **NDA**: Non-disclosure agreement, acuerdo de confidencialidad
-- **a2**:
-- **a3**:
-- **a4**:
+- **UPM**: Universidad Politécnica de Madrid
+- **ETSISI**: Escuela Ténica Superior de Ingeniería de Sistemas Informáticos
+- **ADS**: Arquitectura y diseño Software
+- **ASR**: Architecture Significant Requirement
+- **BG**: Business Goal
+- **BD**: Business Driver
+- **ATAM**: Architecture Tradeoff Analysis Method
 
 ## 1.3 Referencias
 
@@ -74,9 +98,18 @@ En esta sección se incluyen todas las referencias bibliográficas consultadas p
 
 Citation | Table
 ---------|-------
-Author   | Document
+ Mark Richards | Software Architecture Patterns
+ Len Bass | Software Architecture in Practice, Second Edition
+ Wikipedia, 2019 | [Architecture tradeoff analysis method](https://en.wikipedia.org/wiki/Architecture_tradeoff_analysis_method)
+
 
 Table: Referencias
+
+  
+  
+\  
+\
+\
 
 ## 1.4 Estructura del documento
 
@@ -319,8 +352,15 @@ Stakeholders, hace referencia a cualquier persona o grupo de ellas que se vean a
 En el documento de arquitectura se deben considerar aquellas personas o conjuntos de personas que pueden influir en el diseño de la arquitectura, en base a sus necesidades y peticiones.
 El equipo de proyecto ha considerado los siguientes stakeholders:
 
-![Stakeholder Table](/capturas/stakeholderTable.png)
- 
+Stakeholders | Prioridad 
+-------------|----------
+Organizaciones sanitarias públicas y privadas | Alta
+Fabricantes de dispositivos de monitoriazción | Alta
+Usuarios | Media
+Personal sanitario | Media
+
+: Stakeholders originales
+
 El equipo de evaluación considera las siguientes aportaciones: 
 
 •	Organizaciones sanitarias públicas y privadas: Son consideradas como los clientes del proyecto. Su prioridad es alta ya que sus intereses abarcan : costo, calidad, vida del proyecto y la posibilidad de hacer cambios. 
@@ -340,21 +380,7 @@ Además de los ya descritos nos gustaría incluir:
 
 •	Jefe del Proyecto
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 ## 3.5 Análisis de vistas
 
@@ -524,6 +550,16 @@ A cada riesgo y oportunidad identificada le hemos asignado un valor de negocio, 
 
 ![Diagrama Riesgo/Valor: El tamaño de las burbujas es el impacto en el negocio](capturas/risk_value.png)
 
+  
+  
+\  
+\  
+\  
+\  
+\
+\
+\
+
 # 4. Fase 2: Evaluación completa
 
 En la segunda fase continúa el análisis de la arquitectura con los stakeholders del proyecto.
@@ -653,7 +689,7 @@ Respuesta | Utilización de datos biométricos
 :Escenario 5
 
 Decisiones arquitectónicas | Sensibilidad | Equilibrio | Riesgos | No riesgos 
----------------------------|----------|--------------|------------|------|----
+---------------------------|--------------|------------|---------|-----------
  Utilizacion datos biometricos | - | - | R3 | -
 
  :Escenario 5 decisiones
@@ -668,8 +704,7 @@ N/A
 
 ### 4.1.6 Escenario 6
 
- **Escenario: 6** | :Como cliente quiero ejercer mi derecho de privacidad y proteger así mis datos personales. 
-
+ **Escenario: 6** | Como cliente quiero ejercer mi derecho de privacidad y proteger así mis datos personales. 
 -------------|---------------------------------------
 Atributo | Seguridad
 Contexto | Gestión de Sistemas
@@ -679,7 +714,7 @@ Respuesta | Infracción de la LOPD
 :Escenario 6
 
 Decisiones arquitectónicas | Sensibilidad | Equilibrio | Riesgos | No riesgos 
----------------------------|----------|--------------|------------|------|----
+---------------------------|--------------|------------|---------|-----------
  Reforzar seguridad del sistema | - | - | R1, R3 | -
 
  :Escenario 6 decisiones
@@ -694,8 +729,7 @@ N/A
 
 ### 4.1.7 Escenario 7
 
- **Escenario: 7** | :Como cliente quiero que el sistema sea escalable horizontalmente para no experimetar pérdidas de rendimiento con la popularización del uso en incrementos contemplados del 30% de usuarios, en un tiempo de 5 días/persona. 
-
+ **Escenario: 7** | Como cliente quiero que el sistema sea escalable horizontalmente para no experimetar pérdidas de rendimiento con la popularización del uso en incrementos contemplados del 30% de usuarios, en un tiempo de 5 días/persona. 
 -------------|---------------------------------------
 Atributo | Escalabilidad
 Contexto | Gestión de Sistemas
@@ -705,7 +739,7 @@ Respuesta | Crecida innecesaria de la escalabilidad
 :Escenario 7
 
 Decisiones arquitectónicas | Sensibilidad | Equilibrio | Riesgos | No riesgos 
----------------------------|----------|--------------|------------|------|----
+---------------------------|--------------|------------|---------|-----------
  Estudio periódico de uso | PS5 | - | R2 | -
 
  :Escenario 6 decisiones
@@ -717,6 +751,11 @@ Estimar el crecimiento del número de usuarios en una cifra concreta puede lleva
 #### 4.1.7.2 Diagrama arquitectónico
 
 N/A
+  
+\  
+\  
+\  
+\
 
 # 5. Fase 3:  Follow-up
 
@@ -726,12 +765,51 @@ Al tratarse de un ejercicio académico las partes interesadas consideradas para 
 
 # 6. Conclusiones de la evaluación
 
-La presentación de conceptos así como la propia arquitectura propuesto por el equipo de proyecto para el Sistema --- resulta --- si bien consideramos que hay algunos aspectos mejorables en el planteamiento:
+Hemos comentado cada sección con nuestras notas para una comprensión específica de cada apartado. Aún así en términos generales, consideramos que el equipo de arquitectura ha documentado un buen trabajo, de forma entendible. Sin embargo consideramos algunos aspectos mejorables en el planeamiento realizado:
 
-- Explicaciones
-- 
-- 
-- 
+- Identificar mejor los listados de Business Goals, Drivers, ASR, etc. Es fundamental en este tipo de documentación etiquetar los ítems de listas para poder referenciarlos.
+- El árbol de utilidad ha sido reestructurado con el fin de mejorar el mapeo BG - atributo de calidad y ASR. Una prioridad numérica se ha utilizado en este caso.
+- Identificar o nombrar al sistema con un nombre para poder referirse al sistema en concreto y no abusar de "nuestro sistema" o "el sistema".
+- En cuanto al alcance del trabajo propuesto, creemos que está bien contextualizado, sin embargo no nos encajó muy bien lo de los sensores biométricos debido al peligro de guardad dichos datos (y la falta de atributos significantes que hagan las veces de insistir en seguridad a varios niveles).
+- En general los diagramas están bien especificados, pese a que se podría entrar en más detalle.
+- En stakeholders notamos muchas carencias, es un proyecto de interés para muchas partes.
+- También echamos en falta métricas para los Business Goals más tangibles.
+- Por último mencionar la importancia del atributo de calidad Mantenibilidad. Considerado de los últimos por el equipo de arquitectura y de los primeros por el equipo de evaluación. Hubiese sido acertado trazar el cariz crítico del sistema de forma cruzada por todo el documento y recalcar el papel de la mantenibilidad en un sistema semejante, donde es fundamental ser adaptable a cambios, detectar errores, saber qué pasa y por qué cuando algo falle, así como encontrar los responsables.
+
+En cuanto al equipo de evaluación y la didáctica del trabajo en un entorno universitario:
+- Pese a que estamos completamente a favor de la metodología PBL para el aprendizaje en las aulas así como las dinámicas de clases invertidas que se usan en la signatura, haciendo una reflexión académica sobre estos puntos, considero que con la cantidad de herramientas de trabajo colaborativo que hay, deberían exigirse métricas de colaboración para ver la aportaciones individuales al total del trabajo.Siendo muy injusto en algunos casos la repartición de trabajo de las partes.
+
+- Se debería valorar también la capacidad organizativa de cada grupo, control de versiones, etc. Pues este documento de forma aislada no dice tanto como el proceso ATAM en sí, lo cual incluiría un seguimiento completo.
+
+- Pese a todo, grandes entidades del mundo de las ciencias de la computación han hablado ya de la falta de perspectiva que tienen los ingenieros informáticos recién graduados acerca de sistemass *In the large*, considerando para aprender exclusivamente en algunas instituciones universitarias solo *toy problems* o problemas de juguete. En esta asignatura hemos podido diseñar y evaluar un sistema pensado para crecer y ser grande, estar compuesto de subsistemas y hemos tenido la oportunidad de arrojar algo de luz, aunque aun distante, sobre estos grandes sistemas.
+
+En definitiva estamos contentos con el trabajo realizado, y creemos que ha ampliado nuestro conocimiento en todas estas áreas mencionadas previamente. Tampoco dejamos de lado las competencias transversales, como el trabajo en equipo o liderazgo. No han faltado problemas personales entre los miembros, pero se ha llegado en la fecha propuesta a los objetivos establecidos, gracias a la organización seguida y el control de versiones para lo que hemos usado GitHub.
+
+En el siguiente enlace está el repositorio donde se ha trabajado para el desarrollo de este documento: [github.com/lmataa/ehealth-eval-doc](https://github.com/lmataa/ehealth-eval-doc)
+  
+\  
+\  
+\  
+\
+
+
+  
+\  
+\  
+\  
+\
+
+  
+\  
+\  
+\  
+\
+
+  
+\  
+\  
+\  
+\
 
 # 7. Anexo 1: actas de reuniones
 
@@ -771,9 +849,18 @@ Questioner 2 | Alejandro de la Fuente Perdiguero
 
 ### 7.1.2 Introducción
 
+ATAM (“Architecture tradeoff analysis method”) es un proceso de mitigación de riesgos en una fase temprana del ciclo de vida de desarrollo del software. Está diseñado de forma que los evaluadores no necesitan estar familiarizados con la arquitectura o sus objetivos de negocio, el sistema no necesita estar ya construido y puede haber un gran número de “stakeholders”. 
+
+El proceso ATAM consiste en recoger información de los stakeholders sobre los Bussines Drivers (funcionalidad del sistema, objetivos, restricciones, etc.) para extraer los atributos de calidad y usar esta información para analizar las decisiones arquitectónicas sobre el sistema, valorando puntos sensibles y riesgos. El análisis se hace desde lo más general a lo más específico, hasta que la arquitectura ha sido revisada al detalle y los riesgos son identificados.
+
+
 ### 7.1.3 Objetivos
 
+En esta primera sesión se persigue formalizar el inicio del proceso de revisión ATAM, mediante la entrega de la documentación existente al equipo de evaluadores y la firma del contrato de confidencialidad que regirá dicho proceso.
+
 ### 7.1.4 Acuerdos
+
+Se ha acordado una segunda reunión para el día siguiente, 10 de mayo del 2019, en la que el equipo de arquitectura responsable del sistema hará una presentación al equipo de evaluación y el equipo de evaluación pedirá la información adicional que considere necesaria tras una primera aproximación a la arquitectura del sistema.
 
 ## 7.2 ACTA 2
 
@@ -809,11 +896,21 @@ Questioner 2 | María Gallego Martín
 
 :Roles ATAM acta 2
 
-### 7.2.2 Introducción
-
 ### 7.2.3 Objetivos
 
+En esta segunda reunión, el equipo de arquitectura responsable del sistema hará una presentación al equipo de evaluación y el equipo de evaluación pedirá la información adicional que considere necesaria tras una primera aproximación a la arquitectura del sistema. Siguiendo la estructura del proceso ATAM visto en clase, esta sesión se corresponderá con el paso dos de la primera fase: presentación de los Business drivers.
+
 ### 7.2.4 Acuerdos
+
+Se ha llevado a cabo una presentación del problema y de los Business Goals y de los Business drivers del sistema, describiendo:
+
+- Las funciones más importantes del sistema
+- Las restricciones relevantes para el sistema
+- Los Business Goals y su contexto en relación con el problema
+- Los stakeholders y su importancia en el proyecto
+- Los atributos importantes para la arquitectura del sistema (ASR, Architecture Significant Requirements)
+- Se acuerda la última reunión para el día 13 de mayo de 2019.
+
 
 ## 7.3 ACTA 3
 
@@ -849,11 +946,27 @@ Questioner 2 | Carlos Gómez Robles
 
 :Roles ATAM acta 3
 
-### 7.3.2 Introducción
-
 ### 7.3.3 Objetivos
 
+En esta tercera reunión, el equipo de evaluación se ha reunido con el equipo responsable de la arquitectura del sistema para identificar y modificar los Business Goals, con el objetivo de alcanzar un consenso para partir de una base estable y desarrollar el resto de la evaluación a partir de dicha base.
+
+Con anterioridad a esta reunión, el equipo de evaluación había analizado los Business Goals y los Business drivers (a partir de ahora BG y BD, respectivamente) de la arquitectura descritos en la documentación proporcionada. El motivo de esta reunión es obtener un acuerdo sobre los BG y los BD para poder desarrollar una correcta evaluación del sistema. Si no se obtuviera dicho acuerdo, tendríamos que podríamos evaluar la arquitectura partiendo de una base no óptima, de lo que derivaría una calidad cuestionable del resultado final. Por poner un ejemplo, la priorización de los atributos de calidad depende en gran medida de los BG.
+
 ### 7.3.4 Acuerdos
+
+En esta sección se presenta una lista de los acuerdos alcanzados y la problemática que impulsó a tomarlos:
+
+- En un primer lugar, se identificó que la definición de los distintos BG eran muy breves y genéricos y que era imposible su verificación ya que carecían de indicadores de evaluación. Por lo tanto, eran definiciones incompletas. Se consultó al equipo responsable del sistema sobre las distintas medidas que podrían verificar si un BG se ha alcanzado o no. Aunque no se han establecido métricas definitivas, el equipo ATAM ha conseguido establecer unos rangos y tener idea de cuáles son los valores que querría alcanzar el sistema. Por ejemplo, en el BG 1 (Reducir el tiempo de espera a la mitad del actual y además reducir el número de pantallas a dos, necesarias para llegar a la opción de “Pedir cita”), nos serviría como indicar para evaluar el buen funcionamiento. 
+
+- De acuerdo con el BG2, se aclara con el equipo lo que es un estado de salud delicado, y no resuelven la duda con la siguiente aclaración: “cuando el dolor actual se aproxime en más de un 85% al límite configurado por el especialista responsable de dicho paciente”. Además, para verificar el BG2, se aclaran los siguientes indicadores: “En caso de emergencia la ayuda sanitaria tendrá que intervenir en menos de 8 minutos al paciente”. Por último, nos aclaran que la monitorización será realizada con un dispositivo que no correrá su desarrollo a cargo de la empresa, sino que será obtenida a través de terceros. 
+
+- En cuanto BG3, se llega al acuerdo con el grupo y se discute porque este debe pertenecer a los BD. Esto es así, porque nos describen un medio para conseguir un objetivo de negocio. Dicho esto, y tras analizar el documento descriptivo de su arquitectura, debería de haber descrito un BG haciendo hincapié en la necesidad de que en el sistema hubiera un método de identificación de pacientes mediante escáner biomédico tanto por métodos de análisis del iris como por huella dactilar, detallando que ambos métodos deben tener una tasa de error por debajo del 15%, y una velocidad de identificación menor del minuto.
+
+- Aclaraciones sobre el BD1 y el BD2. En cuanto al 1, nos detallan el servidor que usarán y nos detallan la arquitectura debida para su implementación en su sistema, con respecto al 2, se reformula el BD, incluyendo la información corregida en los puntos anteriores respecto a cómo la aplicación recogerá los datos de los pacientes.
+
+- El BD3, suponemos que hace referencia al BG2, además, consideramos según esta formulado en el documento que pertenece a un procedimiento. Junto con el BD4 (que consideramos el grupo de evaluación el verdadero BD del BG2) se reformulan conjuntamente, para mantener su coherencia con el BG2, y se añaden datos de verificación para hacer posible el futuro mantenimiento de los dispositivos. 
+Se añaden los BG y BD que faltan para una completa descripción del sistema. 
+
 
 # 8. Anexo 2: NDA
 
@@ -862,7 +975,6 @@ Questioner 2 | Carlos Gómez Robles
 ### Contrato de confidencialidad
 
 Este documento puede ser utilizado tanto si las empresas o personas firmantes van a compartir mutuamente información confidencial (acuerdo bilateral) como cuando únicamente una de ellas va a compartir información confidencial (acuerdo unilateral), por lo que solo la otra parte adquiere la obligación de guardar en secreto dicha información.
-
 
 #### Contenido
 
@@ -940,7 +1052,11 @@ El presente Acuerdo de Confidencialidad se regirá por la Legislación Española
 
 Y en prueba de esta conformidad, las partes firman o presente acuerdo, por duplicado y a un solo efecto, en el lugar y fecha ut supra.
 
-Entidad | DNI representante | Firma representante
---------|-------------------|--------------------
-Grupo Arquitectura | - | -
-Grupo ATAM | - | -
+ Nombre representante | Firma representante
+----------------------|--------------------
+Miguel Ángel Pérez Souza | ![firma](capturas/Miguel_Angel.png)
+Carlos Vila María | ![firma](capturas/CarlosVila.png)
+Alberto Sastre Gallardo | ![firma](capturas/Screenshot from 2019-05-23 10-45-41.png)
+Alfonso Torres Sánchez | ![firma](capturas/Alfonso_Sastre.png)
+Eric Romero Andrés | ![firma](capturas/Eric_Romero.png)
+
